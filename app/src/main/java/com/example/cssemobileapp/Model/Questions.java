@@ -1,6 +1,6 @@
-package com.example.simplesurveycreator.model;
+package com.example.cssemobileapp.Model;
 
-import com.example.simplesurveycreator.utils.QuestionTypes;
+import com.example.cssemobileapp.utils.QuestionTypes;
 
 import java.util.List;
 

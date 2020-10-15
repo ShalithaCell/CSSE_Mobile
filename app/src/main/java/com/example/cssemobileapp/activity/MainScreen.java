@@ -1,4 +1,4 @@
-package com.example.simplesurveycreator.activity;
+package com.example.cssemobileapp.activity;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,7 +9,7 @@ import android.widget.Button;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.simplesurveycreator.R;
+import com.example.cssemobileapp.R;
 
 /**
  * A simple {@link Fragment} subclass.

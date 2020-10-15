@@ -1,4 +1,4 @@
-package com.example.simplesurveycreator.service;
+package com.example.cssemobileapp.service;
 
 import android.util.Base64;
 

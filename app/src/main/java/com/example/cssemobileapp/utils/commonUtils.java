@@ -1,4 +1,4 @@
-package com.example.simplesurveycreator.utils;
+package com.example.cssemobileapp.utils;
 
 import android.content.Context;
 import android.net.ConnectivityManager;

@@ -1,4 +1,4 @@
-package com.example.simplesurveycreator.utils;
+package com.example.cssemobileapp.utils;
 
 public enum QuestionTypes {
     MULTI_CHOICE,

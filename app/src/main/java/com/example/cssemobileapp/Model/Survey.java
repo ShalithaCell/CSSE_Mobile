@@ -1,4 +1,4 @@
-package com.example.simplesurveycreator.model;
+package com.example.cssemobileapp.Model;
 
 import java.util.ArrayList;
 import java.util.Date;

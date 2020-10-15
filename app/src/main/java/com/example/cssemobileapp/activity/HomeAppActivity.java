@@ -1,14 +1,10 @@
-package com.example.simplesurveycreator.activity;
+package com.example.cssemobileapp.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.DialogFragment;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Button;
-import android.widget.Toast;
 
-import com.example.simplesurveycreator.R;
+import com.example.cssemobileapp.R;
 import com.luseen.spacenavigation.SpaceItem;
 import com.luseen.spacenavigation.SpaceNavigationView;
 import com.luseen.spacenavigation.SpaceOnClickListener;

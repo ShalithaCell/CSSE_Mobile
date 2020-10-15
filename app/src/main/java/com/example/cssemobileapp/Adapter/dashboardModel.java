@@ -1,4 +1,4 @@
-package com.example.simplesurveycreator.recyclerView.adapter.Model;
+package com.example.cssemobileapp.Adapter;
 
 public class dashboardModel {
     private String surveyName, CreatedDate, Submissions, questions, pages;

@@ -1,4 +1,4 @@
-package com.example.simplesurveycreator.utils;
+package com.example.cssemobileapp.utils;
 
 public class validationUtils {
     public static int getNumberDigits(String inString){

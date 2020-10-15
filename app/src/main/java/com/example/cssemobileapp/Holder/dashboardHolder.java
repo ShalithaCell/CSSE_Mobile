@@ -1,4 +1,4 @@
-package com.example.simplesurveycreator.recyclerView.adapter.Model.Holder;
+package com.example.cssemobileapp.Holder;
 
 import android.view.View;
 import android.widget.TextView;
@@ -6,7 +6,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.simplesurveycreator.R;
+import com.example.cssemobileapp.R;
 
 public class dashboardHolder extends RecyclerView.ViewHolder {
 

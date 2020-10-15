@@ -1,7 +1,6 @@
-package com.example.simplesurveycreator.recyclerView.adapter.Model;
+package com.example.cssemobileapp.Adapter;
 
 import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,9 +9,8 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.bumptech.glide.load.model.Model;
-import com.example.simplesurveycreator.R;
-import com.example.simplesurveycreator.recyclerView.adapter.Model.Holder.dashboardHolder;
+import com.example.cssemobileapp.R;
+import com.example.cssemobileapp.Holder.dashboardHolder;
 
 import java.util.ArrayList;
 

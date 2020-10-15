@@ -1,4 +1,4 @@
-package com.example.simplesurveycreator.model;
+package com.example.cssemobileapp.Model;
 
 public class Options {
     private String name;

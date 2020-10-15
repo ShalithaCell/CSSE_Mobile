@@ -1,4 +1,4 @@
-package com.example.simplesurveycreator.activity;
+package com.example.cssemobileapp.activity;
 
 import android.app.ActivityOptions;
 import android.content.Intent;
@@ -16,7 +16,7 @@ import android.widget.TextView;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.simplesurveycreator.R;
+import com.example.cssemobileapp.R;
 
 public class MainActivity extends AppCompatActivity {
 
