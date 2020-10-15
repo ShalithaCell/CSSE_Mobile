@@ -12,6 +12,9 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:theme="@style/Theme.CSSEMobileApp">
+        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".Login">
         android:theme="@style/AppTheme">
         <activity android:name=".activity.HomeAppActivity"/>
         <activity android:name=".activity.MainActivity">
