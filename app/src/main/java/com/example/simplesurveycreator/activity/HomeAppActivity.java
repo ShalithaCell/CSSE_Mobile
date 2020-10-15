@@ -46,15 +46,6 @@ public class HomeAppActivity extends AppCompatActivity {
 
             @Override
             public void onItemClick(int itemIndex, String itemName) {
-                //Toast.makeText(HomeActivity.this, itemIndex + " " + itemName, Toast.LENGTH_SHORT).show();
-
-                if(itemIndex == 0){
-                    DialogFragment newFragment = new NewSurveyPopup();
-                    assert getFragmentManager() != null;
-                    newFragment.show(getSupportFragmentManager(), "DatePicker");
-                }else if(itemIndex == 2){
-                    getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer, new reportHome()).addToBackStack(null).commit();
-                }
 
             }
 
@@ -62,6 +53,8 @@ public class HomeAppActivity extends AppCompatActivity {
             public void onItemReselected(int itemIndex, String itemName) {
 
             }
+
+
         });
 
     }

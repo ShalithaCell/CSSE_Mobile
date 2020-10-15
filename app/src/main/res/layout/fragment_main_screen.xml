@@ -35,13 +35,13 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
         <Button
-            android:id="@+id/btnBlank"
+            android:id="@+id/btnorder"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:width="300dp"
             android:backgroundTint="@color/LightSeaGreen"
-            android:text="@string/blank_survey"
+            android:text="Orders"
             android:textColor="@color/WhiteSmoke"
             app:iconTint="@color/DimGray" />
 
@@ -52,7 +52,6 @@
             android:layout_marginTop="10dp"
             android:width="300dp"
             android:backgroundTint="@color/RoyalBlue"
-            android:text="@string/choose_from_template"
             android:textColor="@color/WhiteSmoke"
             app:iconTint="@color/DarkGray" />
 

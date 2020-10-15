@@ -19,9 +19,6 @@ import com.example.simplesurveycreator.R;
  */
 public class templatemenue extends Fragment {
 
-    private ImageView btn1;
-    private TextView btn2;
-
 
     public templatemenue() {
         // Required empty public constructor
@@ -47,27 +44,7 @@ public class templatemenue extends Fragment {
 
         View rootView = inflater.inflate(R.layout.fragment_templatemenue, container, false);
 
-        btn1 = rootView.findViewById(R.id.sampleteplistbtn1);
-        btn2 = rootView.findViewById(R.id.sampleteplistbtn2);
 
-        btn1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                getFragmentManager().beginTransaction().replace(R.id.fragmentContainer, new populertemplist4()).addToBackStack(null).commit();
-
-            }
-
-        });
-
-        btn2.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View view) {
-
-                getFragmentManager().beginTransaction().replace(R.id.fragmentContainer, new populertemplist4()).addToBackStack(null).commit();
-            }
-
-        });
         return rootView;
     }
 }
