@@ -1,4 +1,4 @@
-package com.example.cssemobileapp;
+package com.example.cssemobileapp.activity;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -16,6 +16,8 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
+
+import com.example.cssemobileapp.R;
 
 /**
  * A simple {@link Fragment} subclass.

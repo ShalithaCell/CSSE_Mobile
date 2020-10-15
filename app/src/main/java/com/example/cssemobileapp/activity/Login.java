@@ -1,14 +1,15 @@
-package com.example.cssemobileapp;
+package com.example.cssemobileapp.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+
+import com.example.cssemobileapp.R;
 
 public class Login extends AppCompatActivity {
     Button materialButton;

@@ -11,16 +11,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.cssemobileapp.R;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link MainScreen#newInstance} factory method to
- * create an instance of this fragment.
- */
+
 public class MainScreen extends Fragment {
 
     private RecyclerView recyclerViewInventory;
 
-    private Button btn1;
+    private Button btn1,btn2,btn3,btn4;
 
     private Button btnNewSurvey;
 
@@ -29,13 +25,7 @@ public class MainScreen extends Fragment {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @return A new instance of fragment MainScreen.
-     */
-    // TODO: Rename and change types and number of parameters
+
     public static MainScreen newInstance(String param1, String param2) {
         MainScreen fragment = new MainScreen();
 
@@ -59,18 +49,38 @@ public class MainScreen extends Fragment {
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.fragment_main_screen, container, false);
 
-        btn1 = (Button)rootView.findViewById(R.id.btnorder);
-
-        templatemenue templatemenue = new templatemenue();
+        btn1 = (Button)rootView.findViewById(R.id.palceorderbn);
+        btn2 = (Button)rootView.findViewById(R.id.vieworderbtn);
+        btn3 = (Button)rootView.findViewById(R.id.vieworderstatusbtn);
+        btn4 = (Button)rootView.findViewById(R.id.deliveryordersbtn);
 
         btn1.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
 
-       getFragmentManager().beginTransaction().replace(R.id.fragmentContainer, templatemenue).addToBackStack(null).commit();
+                getFragmentManager().beginTransaction().replace(R.id.fragmentContainer, new PlaceNewOrder()).addToBackStack(null).commit();
 
+            }
 
+        });
+
+        btn2.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+
+                getFragmentManager().beginTransaction().replace(R.id.fragmentContainer, new Home_View_Orders()).addToBackStack(null).commit();
+
+            }
+
+        });
+        btn4.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+
+                getFragmentManager().beginTransaction().replace(R.id.fragmentContainer, new Home_Delivery()).addToBackStack(null).commit();
 
             }
 

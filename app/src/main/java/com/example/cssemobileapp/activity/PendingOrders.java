@@ -1,4 +1,4 @@
-package com.example.cssemobileapp;
+package com.example.cssemobileapp.activity;
 
 import android.os.Bundle;
 
@@ -16,6 +16,7 @@ import android.view.ViewGroup;
 
 import com.example.cssemobileapp.Adapter.PendingOrderAdapter;
 import com.example.cssemobileapp.Model.PendingOrderModel;
+import com.example.cssemobileapp.R;
 
 import java.util.ArrayList;
 
