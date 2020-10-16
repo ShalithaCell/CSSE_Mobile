@@ -10,14 +10,11 @@ import com.example.cssemobileapp.R;
 
 public class PendingOrderHolder extends RecyclerView.ViewHolder {
 
-
-    public TextView pendingOrderName;
     public TextView pendingOrderId;
 
     public PendingOrderHolder(@NonNull View itemView) {
         super(itemView);
 
-        this.pendingOrderName = itemView.findViewById(R.id.pending_order_name);
-        this.pendingOrderId = itemView.findViewById(R.id.pending_order_id);
+        this.pendingOrderId = itemView.findViewById(R.id.order_id);
     }
 }

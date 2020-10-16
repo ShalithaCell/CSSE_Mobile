@@ -8,9 +8,13 @@
     android:layout_height="80dp">
 
     <TextView
-        android:id="@+id/pending_order_name"
+        android:id="@+id/refecence_code"
         android:layout_width="213dp"
         android:layout_height="23dp"
+        android:text="Order reference code :"
+        android:textSize="20sp"
+        android:textColor="@color/Black"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.09"
@@ -19,15 +23,17 @@
         app:layout_constraintVertical_bias="0.508" />
 
     <TextView
-        android:id="@+id/pending_order_id"
+        android:id="@+id/order_id"
         android:layout_width="88dp"
         android:layout_height="17dp"
+        android:textSize="20sp"
+        android:textColor="@color/Black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.147"
-        app:layout_constraintStart_toEndOf="@+id/pending_order_name"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/refecence_code"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.508" />
+        app:layout_constraintVertical_bias="0.507" />
 
     <LinearLayout
         android:layout_width="68dp"
@@ -36,7 +42,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.923"
-        app:layout_constraintStart_toEndOf="@+id/pending_order_id"
+        app:layout_constraintStart_toEndOf="@+id/order_id"
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView

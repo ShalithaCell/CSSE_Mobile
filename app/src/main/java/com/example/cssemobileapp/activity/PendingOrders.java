@@ -1,4 +1,4 @@
-package com.example.cssemobileapp;
+package com.example.cssemobileapp.activity;
 
 import android.os.Bundle;
 
@@ -16,6 +16,7 @@ import android.view.ViewGroup;
 
 import com.example.cssemobileapp.Adapter.PendingOrderAdapter;
 import com.example.cssemobileapp.Model.PendingOrderModel;
+import com.example.cssemobileapp.R;
 
 import java.util.ArrayList;
 
@@ -76,15 +77,6 @@ public class PendingOrders extends Fragment {
     private ArrayList<PendingOrderModel> getList() {
         ArrayList<PendingOrderModel> models = new ArrayList<>();
 
-        PendingOrderModel m = new PendingOrderModel();
-        m.setPendingOrderName("Order 01");
-        m.setPendingOrderId("1111");
-        models.add(m);
-
-        m = new PendingOrderModel();
-        m.setPendingOrderName("Order 02");
-        m.setPendingOrderId("2222");
-        models.add(m);
 
 
         initRecyclerView();

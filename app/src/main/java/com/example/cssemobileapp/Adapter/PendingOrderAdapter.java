@@ -37,7 +37,6 @@ public class PendingOrderAdapter extends RecyclerView.Adapter<PendingOrderHolder
 
     @Override
     public void onBindViewHolder(@NonNull PendingOrderHolder holder, int i) {
-        holder.pendingOrderName.setText(models.get(i).getPendingOrderName());
         holder.pendingOrderId.setText(models.get(i).getPendingOrderId());
     }
 
