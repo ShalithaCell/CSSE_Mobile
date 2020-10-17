@@ -8,13 +8,14 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.cssemobileapp.R;
 
-public class PendingOrderHolder extends RecyclerView.ViewHolder {
+public class RejectedOrderHolder extends RecyclerView.ViewHolder{
 
-    public TextView pendingOrderId;
+    public TextView rejectedOrderId;
 
-    public PendingOrderHolder(@NonNull View itemView) {
+    public RejectedOrderHolder(@NonNull View itemView) {
         super(itemView);
 
-        this.pendingOrderId = itemView.findViewById(R.id.order_id);
+        this.rejectedOrderId = itemView.findViewById(R.id.order_id);
     }
+
 }
