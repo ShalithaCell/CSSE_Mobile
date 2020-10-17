@@ -9,35 +9,37 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.cssemobileapp.Holder.PendingOrderHolder;
-import com.example.cssemobileapp.Model.PendingOrderModel;
+import com.example.cssemobileapp.Holder.ActiveOrderHolder;
+import com.example.cssemobileapp.Holder.RejectedOrderHolder;
+import com.example.cssemobileapp.Model.ActiveOrderModel;
+import com.example.cssemobileapp.Model.RejectedOrderModel;
 import com.example.cssemobileapp.R;
 
 import java.util.ArrayList;
 
-public class PendingOrderAdapter extends RecyclerView.Adapter<PendingOrderHolder> {
+public class RejectedOrderAdapter  extends RecyclerView.Adapter<RejectedOrderHolder> {
 
     Context c;
-    ArrayList<PendingOrderModel> models;
+    ArrayList<RejectedOrderModel> models;
     CardView cardView;
 
-    public PendingOrderAdapter(Context c, ArrayList<PendingOrderModel> models) {
+    public RejectedOrderAdapter(Context c, ArrayList<RejectedOrderModel> models) {
         this.c = c;
         this.models = models;
     }
 
-
     @NonNull
     @Override
-    public PendingOrderHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
+    public RejectedOrderHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.card_view, null);
         cardView = (CardView) view;
-        return new PendingOrderHolder(view);
+        return new RejectedOrderHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull PendingOrderHolder holder, int i) {
-        holder.pendingOrderId.setText(models.get(i).getPendingOrderId());
+    public void onBindViewHolder(@NonNull RejectedOrderHolder holder, int i) {
+        holder.rejectedOrderId.setText(models.get(i).getRejectedOrderId());
+
     }
 
     @Override

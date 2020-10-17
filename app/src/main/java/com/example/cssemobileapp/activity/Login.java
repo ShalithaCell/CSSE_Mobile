@@ -19,7 +19,7 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-         materialButton = (Button) findViewById(R.id.button_signin) ;
+        materialButton = (Button) findViewById(R.id.button_signin) ;
         materialButton.setBackgroundColor( ContextCompat.getColor(Login.this, R.color.colorSuccess));
     }
 

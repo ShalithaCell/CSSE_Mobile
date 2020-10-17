@@ -9,19 +9,22 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.cssemobileapp.Holder.ActiveOrderHolder;
 import com.example.cssemobileapp.Holder.PendingOrderHolder;
+import com.example.cssemobileapp.Model.ActiveOrderModel;
 import com.example.cssemobileapp.Model.PendingOrderModel;
 import com.example.cssemobileapp.R;
+import com.example.cssemobileapp.activity.ActiveOrders;
 
 import java.util.ArrayList;
 
-public class PendingOrderAdapter extends RecyclerView.Adapter<PendingOrderHolder> {
+public class ActiveOrderAdapter extends RecyclerView.Adapter<ActiveOrderHolder> {
 
     Context c;
-    ArrayList<PendingOrderModel> models;
+    ArrayList<ActiveOrderModel> models;
     CardView cardView;
 
-    public PendingOrderAdapter(Context c, ArrayList<PendingOrderModel> models) {
+    public ActiveOrderAdapter(Context c, ArrayList<ActiveOrderModel> models) {
         this.c = c;
         this.models = models;
     }
@@ -29,15 +32,15 @@ public class PendingOrderAdapter extends RecyclerView.Adapter<PendingOrderHolder
 
     @NonNull
     @Override
-    public PendingOrderHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
+    public ActiveOrderHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.card_view, null);
         cardView = (CardView) view;
-        return new PendingOrderHolder(view);
+        return new ActiveOrderHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull PendingOrderHolder holder, int i) {
-        holder.pendingOrderId.setText(models.get(i).getPendingOrderId());
+    public void onBindViewHolder(@NonNull ActiveOrderHolder holder, int i) {
+        holder.activeOrderId.setText(models.get(i).getActiveOrderId());
     }
 
     @Override
