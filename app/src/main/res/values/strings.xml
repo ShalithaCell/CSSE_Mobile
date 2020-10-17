@@ -209,4 +209,19 @@
     <string name="end_date">End date</string>
     <string name="active_and_publish">Active and Publish</string>
     <string name="save_and_edit">Save and Edit</string>
+
+
+
+    <!-- Titles -->
+    <string name="first_title">Create Account</string>
+    <string name="second_title">Top Up the Account</string>
+    <string name="third_title">Scan the QR code</string>
+
+
+    <!-- Description -->
+    <string name="first_desc">Register to the app by simply providing the personal inforamation and use the transit service.</string>
+    <string name="second_desc">Recharge the account easily with a credit card.</string>
+    <string name="third_desc">Just scan the QR code and travel where ever you need.</string>
+
+
 </resources>
