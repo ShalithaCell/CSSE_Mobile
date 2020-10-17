@@ -16,9 +16,9 @@ public class MainScreen extends Fragment {
 
     private RecyclerView recyclerViewInventory;
 
-    private Button btn1,btn2,btn3,btn4;
+    private Button btn1,btn2,btn3;
 
-    private Button btnNewSurvey;
+
 
 
     public MainScreen() {
@@ -50,9 +50,9 @@ public class MainScreen extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_main_screen, container, false);
 
         btn1 = (Button)rootView.findViewById(R.id.palceorderbn);
-        btn2 = (Button)rootView.findViewById(R.id.vieworderbtn);
-        btn3 = (Button)rootView.findViewById(R.id.vieworderstatusbtn);
-        btn4 = (Button)rootView.findViewById(R.id.deliveryordersbtn);
+
+        btn2 = (Button)rootView.findViewById(R.id.vieworderstatusbtn);
+        btn3 = (Button)rootView.findViewById(R.id.deliveryordersbtn);
 
         btn1.setOnClickListener(new View.OnClickListener() {
 
@@ -75,7 +75,7 @@ public class MainScreen extends Fragment {
             }
 
         });
-        btn4.setOnClickListener(new View.OnClickListener() {
+        btn3.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
