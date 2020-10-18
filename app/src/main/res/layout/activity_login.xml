@@ -46,7 +46,7 @@
                 android:layout_marginEnd="48dp"
                 android:onClick="FogotPWbuttonClickFunction"
                 android:paddingLeft="30dp"
-                android:text="Welcome to SurveyCrest"
+                android:text="Welcome to Easyorm"
                 android:textAlignment="textStart"
                 android:textColor="#000000"
                 android:textSize="15sp"
@@ -158,7 +158,7 @@
                 android:id="@+id/textView"
                 android:layout_width="119dp"
                 android:layout_height="30dp"
-                android:layout_marginEnd="4dp"
+                android:layout_marginEnd="20dp"
                 android:onClick="FogotPWbuttonClickFunction"
                 android:text="Fogot Password?"
                 android:textAlignment="center"
@@ -168,7 +168,8 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/editTextPassword"
-                app:layout_constraintVertical_bias="0.188" />
+                app:layout_constraintVertical_bias="0.175" />
+
 
             <Button
                 android:id="@+id/button_signin"
@@ -179,7 +180,6 @@
                 android:backgroundTint="@color/colorSuccess"
                 android:backgroundTintMode="add"
                 android:fontFamily="monospace"
-                android:onClick="SignInButtonClickFunction"
                 android:text="Sign in"
                 android:textColor="@color/background"
                 android:textColorHighlight="@color/Green"
@@ -199,8 +199,8 @@
                 android:layout_height="30dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button_signin"
-                app:layout_constraintVertical_bias="0.176"
-                tools:layout_editor_absoluteX="0dp">
+                app:layout_constraintVertical_bias="0.428"
+                tools:layout_editor_absoluteX="4dp">
 
                 <TextView
                     android:id="@+id/textView2"
@@ -208,9 +208,9 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentEnd="true"
-                    android:layout_marginTop="6dp"
-                    android:layout_marginEnd="106dp"
-                    android:text="New to Survey Crest ?"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="119dp"
+                    android:text="New to Easyorm ?"
                     android:textColor="#000000"
                     android:textStyle="bold"
                     tools:layout_editor_absoluteX="146dp"
@@ -222,10 +222,9 @@
                     android:layout_height="wrap_content"
                     android:layout_alignStart="@+id/textView2"
                     android:layout_alignParentBottom="true"
-                    android:layout_marginStart="149dp"
-                    android:layout_marginBottom="6dp"
-                    android:onClick="SignUpButtonClickFunction"
-                    android:text="Sign up"
+                    android:layout_marginStart="110dp"
+                    android:layout_marginBottom="9dp"
+                    android:text="Go to our web"
                     android:textColor="#3F51B5"
                     android:textStyle="bold|italic" />
             </RelativeLayout>

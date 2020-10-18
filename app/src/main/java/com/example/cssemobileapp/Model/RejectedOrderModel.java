@@ -11,3 +11,4 @@ public class RejectedOrderModel {
         this.rejectedOrderId = rejectedOrderId;
     }
 }
+

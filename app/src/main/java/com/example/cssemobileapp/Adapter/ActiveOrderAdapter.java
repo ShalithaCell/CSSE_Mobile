@@ -49,4 +49,6 @@ public class ActiveOrderAdapter extends RecyclerView.Adapter<ActiveOrderHolder> 
         else
             return models.size();
     }
+
 }
+

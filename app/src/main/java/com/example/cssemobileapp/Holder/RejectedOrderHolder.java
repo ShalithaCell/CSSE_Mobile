@@ -17,5 +17,5 @@ public class RejectedOrderHolder extends RecyclerView.ViewHolder{
 
         this.rejectedOrderId = itemView.findViewById(R.id.order_id);
     }
-
 }
+
