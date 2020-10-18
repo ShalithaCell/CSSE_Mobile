@@ -123,6 +123,7 @@ public class Login extends AppCompatActivity {
 
         Intent intent = new Intent(Login.this, HomeAppActivity.class);
         startActivity(intent);
+    }
     @Override
     public void onStart() {
         super.onStart();
