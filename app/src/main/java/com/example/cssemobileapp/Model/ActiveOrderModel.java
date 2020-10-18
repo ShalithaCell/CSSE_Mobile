@@ -14,4 +14,3 @@ public class ActiveOrderModel {
         this.activeOrderId = activeOrderId;
     }
 }
-

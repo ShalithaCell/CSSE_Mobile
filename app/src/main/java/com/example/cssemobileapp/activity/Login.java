@@ -63,7 +63,8 @@ public class Login extends AppCompatActivity {
                 }
             }
         });
-
+        materialButton = (Button) findViewById(R.id.button_signin) ;
+        materialButton.setBackgroundColor( ContextCompat.getColor(Login.this, R.color.colorSuccess));
     }
 
 

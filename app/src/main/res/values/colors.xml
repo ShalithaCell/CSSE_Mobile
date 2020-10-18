@@ -217,5 +217,10 @@
     <color name="end_blue">#0bcce6</color>
     <color name="transparent_blue">#33FFFFFF</color>
 
+    <color name="colorMainBackground">#F0CC3B</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorLetsBtn">#E69640</color>
+    <color name="colorLightWhite">#F8F8F7</color>
 
 </resources>

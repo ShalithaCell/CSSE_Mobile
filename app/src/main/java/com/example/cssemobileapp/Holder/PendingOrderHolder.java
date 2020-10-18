@@ -10,7 +10,6 @@ import com.example.cssemobileapp.R;
 
 public class PendingOrderHolder extends RecyclerView.ViewHolder {
 
-
     public TextView pendingOrderId;
 
     public PendingOrderHolder(@NonNull View itemView) {

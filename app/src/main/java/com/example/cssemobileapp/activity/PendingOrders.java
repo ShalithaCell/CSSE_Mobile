@@ -85,7 +85,6 @@ public class PendingOrders extends Fragment {
         m.setPendingOrderId("2222");
         models.add(m);
 
-
         initRecyclerView();
         return models;
     }

@@ -28,25 +28,24 @@
 
     <LinearLayout
         android:id="@+id/linearLayout1"
-        android:layout_width="416dp"
-        android:layout_height="428dp"
-        android:layout_marginTop="80dp"
+        android:layout_width="413dp"
+        android:layout_height="389dp"
+        android:layout_marginTop="75dp"
         android:layout_marginEnd="3dp"
-        android:layout_marginBottom="121dp"
+        android:layout_marginBottom="97dp"
         android:gravity="center_horizontal"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
         <Button
             android:id="@+id/palceorderbn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="80dp"
+            android:layout_marginTop="30dp"
             android:width="300dp"
             android:background="@drawable/button7"
             android:text="Place New Order"
@@ -55,22 +54,10 @@
             android:textStyle="bold" />
 
         <Button
-            android:id="@+id/vieworderbtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:width="300dp"
-            android:background="@drawable/button7"
-            android:text="View Orders"
-            android:textColor="@color/WhiteSmoke"
-            android:textSize="15sp"
-            android:textStyle="bold" />
-
-        <Button
             android:id="@+id/vieworderstatusbtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="60dp"
             android:width="300dp"
             android:background="@drawable/button7"
             android:text="View Order status"
@@ -82,7 +69,7 @@
             android:id="@+id/deliveryordersbtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="60dp"
             android:width="300dp"
             android:background="@drawable/button7"
             android:text="Delivery Oders "
