@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -33,8 +34,9 @@ public class Login extends AppCompatActivity {
     }
 
     public void SignInButtonClickFunction(View view) {
-        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.replace(R.id.login, new PendingOrders()).addToBackStack(null).commit();
+
+        Intent intent = new Intent(Login.this, HomeAppActivity.class);
+        startActivity(intent);
 
         Toast toast_success = Toast.makeText(getApplicationContext(),
                 "Successfully Logged in.",

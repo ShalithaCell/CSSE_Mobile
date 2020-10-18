@@ -46,7 +46,7 @@ public class PlaceNewOrder extends Fragment {
             @Override
             public void onClick(View view) {
 
-                getFragmentManager().beginTransaction().replace(R.id.fragmentContainer, new AddItemsForOrder()).addToBackStack(null).commit();
+                getFragmentManager().beginTransaction().replace(R.id.fragmentContainer, new addItems()).addToBackStack(null).commit();
 
             }
 
