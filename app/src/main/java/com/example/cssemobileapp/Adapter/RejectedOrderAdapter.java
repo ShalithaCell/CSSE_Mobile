@@ -48,4 +48,6 @@ public class RejectedOrderAdapter  extends RecyclerView.Adapter<RejectedOrderHol
         else
             return models.size();
     }
+
 }
+
