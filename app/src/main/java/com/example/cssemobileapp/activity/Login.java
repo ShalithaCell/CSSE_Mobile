@@ -34,7 +34,7 @@ public class Login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        // Initialize Firebase Auth
+// Initialize Firebase Auth
         mAuth = FirebaseAuth.getInstance();
 
         editTextEmail = findViewById(R.id.editTextEmailAddress);
@@ -63,8 +63,7 @@ public class Login extends AppCompatActivity {
                 }
             }
         });
-        materialButton = (Button) findViewById(R.id.button_signin) ;
-        materialButton.setBackgroundColor( ContextCompat.getColor(Login.this, R.color.colorSuccess));
+
     }
 
 
@@ -77,19 +76,19 @@ public class Login extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            // Sign in success, update UI with the signed-in user's information
+// Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "createUserWithEmail:success");
                             FirebaseUser user = mAuth.getCurrentUser();
                             updateUI(user);
                         } else {
-                            // If sign in fails, display a message to the user.
+// If sign in fails, display a message to the user.
                             Log.w(TAG, "createUserWithEmail:failure", task.getException());
                             Toast.makeText(Login.this, "Authentication failed.",
                                     Toast.LENGTH_SHORT).show();
                             updateUI(null);
                         }
 
-                        // ...
+// ...
                     }
                 });
     }
@@ -100,23 +99,23 @@ public class Login extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            // Sign in success, update UI with the signed-in user's information
+// Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "signInWithEmail:success");
                             FirebaseUser user = mAuth.getCurrentUser();
                             updateUI(user);
-                            //  FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-                            //  fragmentTransaction.replace(R.id.login, new PendingOrders()).addToBackStack(null).commit();
+// FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+// fragmentTransaction.replace(R.id.login, new PendingOrders()).addToBackStack(null).commit();
 
                         } else {
-                            // If sign in fails, display a message to the user.
+// If sign in fails, display a message to the user.
                             Log.w(TAG, "signInWithEmail:failure", task.getException());
                             Toast.makeText(Login.this, "Authentication failed.",
                                     Toast.LENGTH_SHORT).show();
                             updateUI(null);
-                            // ...
+// ...
                         }
 
-                        // ...
+// ...
                     }
                 });
     }
@@ -124,7 +123,7 @@ public class Login extends AppCompatActivity {
     @Override
     public void onStart() {
         super.onStart();
-        // Check if user is signed in (non-null) and update UI accordingly.
+// Check if user is signed in (non-null) and update UI accordingly.
         FirebaseUser currentUser = mAuth.getCurrentUser();
         updateUI(currentUser);
     }
@@ -145,13 +144,13 @@ public class Login extends AppCompatActivity {
 
     }
 
-   /* public void SignInButtonClickFunction(View view) {
-        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.replace(R.id.login, new PendingOrders()).addToBackStack(null).commit();
+/* public void SignInButtonClickFunction(View view) {
+FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+fragmentTransaction.replace(R.id.login, new PendingOrders()).addToBackStack(null).commit();
 
-        Toast toast_success = Toast.makeText(getApplicationContext(),
-                "Successfully Logged in.",
-                Toast.LENGTH_SHORT);
-        toast_success.show();
-    }*/
+Toast toast_success = Toast.makeText(getApplicationContext(),
+"Successfully Logged in.",
+Toast.LENGTH_SHORT);
+toast_success.show();
+}*/
 }
