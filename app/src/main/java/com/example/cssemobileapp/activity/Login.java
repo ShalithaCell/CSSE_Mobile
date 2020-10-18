@@ -119,7 +119,10 @@ public class Login extends AppCompatActivity {
                     }
                 });
     }
+    public void SignInButtonClickFunction(View view) {
 
+        Intent intent = new Intent(Login.this, HomeAppActivity.class);
+        startActivity(intent);
     @Override
     public void onStart() {
         super.onStart();
@@ -134,8 +137,6 @@ public class Login extends AppCompatActivity {
             Intent intent = new Intent(this, HomeAppActivity.class);
             startActivity(intent);
             finish();
-
-
         }else{
             Toast.makeText(this,"Login Failed!,Try again",Toast.LENGTH_LONG).show();
         }
