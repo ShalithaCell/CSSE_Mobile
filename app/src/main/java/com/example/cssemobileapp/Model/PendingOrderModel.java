@@ -1,16 +1,7 @@
 package com.example.cssemobileapp.Model;
 
 public class PendingOrderModel {
-    private String pendingOrderName, pendingOrderId;
-
-
-    public String getPendingOrderName() {
-        return pendingOrderName;
-    }
-
-    public void setPendingOrderName(String pendingOrderName) {
-        this.pendingOrderName = pendingOrderName;
-    }
+    private String pendingOrderId;
 
     public String getPendingOrderId() {
         return pendingOrderId;

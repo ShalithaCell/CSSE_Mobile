@@ -78,12 +78,10 @@ public class PendingOrders extends Fragment {
         ArrayList<PendingOrderModel> models = new ArrayList<>();
 
         PendingOrderModel m = new PendingOrderModel();
-        m.setPendingOrderName("Order 01");
         m.setPendingOrderId("1111");
         models.add(m);
 
         m = new PendingOrderModel();
-        m.setPendingOrderName("Order 02");
         m.setPendingOrderId("2222");
         models.add(m);
 
@@ -93,7 +91,6 @@ public class PendingOrders extends Fragment {
     }
     private  void initRecyclerView(){
         Log.d(TAG, "initRecyclerView: started");
-
     }
 
     @Override
@@ -113,6 +110,16 @@ public class PendingOrders extends Fragment {
         recyclerView.addItemDecoration(new DividerItemDecoration(container.getContext(), LinearLayoutManager.VERTICAL));
         recyclerView.setAdapter(pendingOrderAdapter);
 
+        cardView.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+
+                getFragmentManager().beginTransaction().replace(R.id.fragmentContainer, new ViewPendingOrder()).addToBackStack(null).commit();
+
+            }
+
+        });
 
 
         return rootView;
