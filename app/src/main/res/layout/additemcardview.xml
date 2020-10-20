@@ -27,6 +27,7 @@
             android:layout_marginLeft="5dp"
             android:layout_marginEnd="24dp"
             android:hint="Item"
+            app:ms_hint="Item"
             android:paddingLeft="5dp"
             app:ms_padding_left="5dp" />
 
