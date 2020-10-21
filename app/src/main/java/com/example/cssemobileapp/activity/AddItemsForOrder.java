@@ -17,6 +17,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.cssemobileapp.Model.Item;
+import com.example.cssemobileapp.Model.Supplier;
 import com.example.cssemobileapp.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -30,35 +31,16 @@ import com.jaredrummler.materialspinner.MaterialSpinner;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link AddItemsForOrder#newInstance} factory method to
- * create an instance of this fragment.
- */
+
 public class AddItemsForOrder extends Fragment {
 
     ImageView addnewitembtn;
     LinearLayout list;
-    MaterialSpinner _spinner;
 
     List<String> no;
+    List<String> no2;
+    List<String> no3;
 
-
-    public AddItemsForOrder() {
-        // Required empty public constructor
-    }
-
-    public static AddItemsForOrder newInstance(String param1, String param2) {
-        AddItemsForOrder fragment = new AddItemsForOrder();
-
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -76,7 +58,7 @@ public class AddItemsForOrder extends Fragment {
         list = view.findViewById(R.id.list);
 
         no = new ArrayList<String>();
-        _spinner = view.findViewById(R.id.spinner);
+        no2 = new ArrayList<String>();
 
         addnewitembtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -86,6 +68,55 @@ public class AddItemsForOrder extends Fragment {
                 MaterialSpinner spinner = (MaterialSpinner) journeyView.findViewById(R.id.spinner);
                 spinner.setItems(no);
 
+                MaterialSpinner spinner1 = (MaterialSpinner) journeyView.findViewById(R.id.spinner_supplier);
+                TextView spinner_price = (TextView) journeyView.findViewById(R.id.spinner_price);
+                TextView spinner_qty = (TextView) journeyView.findViewById(R.id.spinner_aqty);
+
+                spinner.setOnItemSelectedListener(new MaterialSpinner.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(MaterialSpinner view, int position, long id, Object item) {
+
+                        final String[] supplier = new String[1];
+
+
+                        FirebaseFirestore db = FirebaseFirestore.getInstance();
+
+                        db.collection("items")
+                                .get()
+                                .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+                                    @Override
+                                    public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                                        if (!queryDocumentSnapshots.isEmpty()) {
+                                            List<DocumentSnapshot> list = queryDocumentSnapshots.getDocuments();
+                                            for (DocumentSnapshot d : list) {
+                                                Item i = d.toObject(Item.class);
+                                                if ((i.getName()).equals(item)){
+                                                    supplier[0] = i.getSupplier();
+                                                    spinner_price.setText(i.getUnitPrice());
+                                                    spinner_qty.setText(i.getQty());
+                                                }
+                                            }
+                                        }
+
+                                        db.collection("suppliers")
+                                                .get()
+                                                .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+                                                    @Override
+                                                    public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                                                        List<DocumentSnapshot> list = queryDocumentSnapshots.getDocuments();
+                                                        for (DocumentSnapshot d : list) {
+                                                            Supplier i = d.toObject(Supplier.class);
+
+                                                            if (d.getId().equals(supplier[0]))
+                                                                spinner1.setItems(i.getName());
+
+                                                        }
+                                                    }
+                                                });
+                                    }
+                                });
+                    }
+                });
                 journeyView.findViewById(R.id.aaa);
                 list.addView(journeyView);
             }
@@ -103,10 +134,10 @@ public class AddItemsForOrder extends Fragment {
                             for (DocumentSnapshot d : list) {
                                 Item i = d.toObject(Item.class);
                                 no.add(i.getName());
+                                no2.add(i.getSupplier());
                             }
                         }
                     }
-
                 });
     }
 }

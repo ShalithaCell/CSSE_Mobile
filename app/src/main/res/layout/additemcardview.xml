@@ -4,88 +4,169 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/aaa"
     android:layout_width="match_parent"
-    android:layout_height="180dp"
+    android:layout_height="270dp"
     android:background="@drawable/rounded_card2"
     android:orientation="vertical"
-    android:padding="5dp">
+    android:padding="5dp"
+    >
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="5dp">
+        android:padding="5dp"
+        android:layout_marginBottom="5dp">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="10dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp">
 
-        <com.jaredrummler.materialspinner.MaterialSpinner
-            android:id="@+id/spinner"
-            android:layout_width="280dp"
-            android:layout_height="40dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginEnd="24dp"
-            android:hint="Item"
-            app:ms_hint="Item"
-            android:paddingLeft="5dp"
-            app:ms_padding_left="5dp" />
-
-        <TextView
-            android:id="@+id/textView19"
-            android:layout_width="280dp"
-            android:layout_marginTop="15dp"
-            android:layout_below="@id/spinner"
-            android:layout_height="40dp"
-            android:layout_marginBottom="12dp"
-            android:hint="Quantity" />
-
-        <LinearLayout
-            android:id="@+id/linearLayout2"
-            android:layout_width="74dp"
-            android:layout_height="134dp"
-            android:layout_marginLeft="320dp"
-            android:orientation="vertical">
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="18dp" />
-
-            <ImageView
-                android:id="@+id/edit_pending_orderView"
-                android:layout_width="match_parent"
+            <TextView
+                android:id="@+id/text_item"
+                android:layout_width="wrap_content"
                 android:layout_height="40dp"
-                android:layout_margin="1dp"
-                android:src="@drawable/ic_editicon_black" />
+                android:layout_marginTop="10dp"
+                android:text="Item" />
 
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="18dp" />
-
-            <ImageView
-                android:id="@+id/delete_pending_order"
-                android:layout_width="match_parent"
+            <com.jaredrummler.materialspinner.MaterialSpinner
+                android:id="@+id/spinner"
+                android:layout_width="200dp"
                 android:layout_height="40dp"
-                android:layout_margin="1dp"
-                android:src="@drawable/ic_deleteicon_black" />
+                android:layout_marginStart="100dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginRight="-80dp"
+                android:hint="Item"
+                android:paddingLeft="5dp"
+                app:ms_hint="Item"
+                app:ms_padding_left="5dp" />
 
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-        </LinearLayout>
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_below="@id/spinner"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="12dp"
+                android:hint="Supplier" />
 
-        <TextView
-            android:id="@+id/textView20"
-            android:layout_width="280dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="5dp"
-            android:layout_below="@id/textView19"
-            android:hint="Price Per One Quantity"
-            android:textColor="@color/DarkGray" />
+            <com.jaredrummler.materialspinner.MaterialSpinner
+                android:id="@+id/spinner_supplier"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="100dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginRight="-80dp"
+                android:hint="Supplier"
+                android:paddingLeft="5dp"
+                app:ms_hint="Supplier"
+                app:ms_padding_left="5dp" />
 
-    </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="57dp"
+                android:layout_height="180dp"
+                android:layout_marginLeft="320dp"
+                android:orientation="vertical">
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="43dp" />
+
+                <ImageView
+                    android:id="@+id/edit_pending_orderView"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_margin="1dp"
+                    android:src="@drawable/ic_editicon_black" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="62dp" />
+
+                <ImageView
+                    android:id="@+id/delete_pending_order"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_margin="1dp"
+                    android:src="@drawable/ic_deleteicon_black" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="wrap_content"
+                android:layout_height="33dp"
+                android:layout_below="@id/textView19"
+                android:layout_marginTop="5dp"
+                android:hint="Price(1 Unit)"
+                android:textColor="@color/DarkGray" />
+
+            <TextView
+                android:id="@+id/spinner_price"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="100dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="100dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginRight="-80dp"
+                android:hint="Price"
+                android:paddingLeft="5dp"
+ />
+
+            <TextView
+                android:id="@+id/textView22"
+                android:layout_width="wrap_content"
+                android:layout_height="31dp"
+                android:layout_below="@+id/textView20"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="12dp"
+                android:hint="Available Qty" />
+
+            <TextView
+                android:id="@+id/spinner_aqty"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="100dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="150dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginRight="-80dp"
+                android:hint="Available Qty"
+                android:paddingLeft="5dp" />
+
+            <TextView
+                android:id="@+id/textView23"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_below="@+id/textView22"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="12dp"
+                android:hint="Quantity" />
+
+            <EditText
+                android:id="@+id/spinner_qty"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="100dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="190dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginRight="-80dp"
+                android:hint="Quantity"
+                android:paddingLeft="5dp" />
+
+
+        </RelativeLayout>
 
     </androidx.cardview.widget.CardView>
 
 </LinearLayout>
-
