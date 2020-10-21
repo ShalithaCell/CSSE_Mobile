@@ -8,9 +8,67 @@
   "client": [
     {
       "client_info": {
+        "mobilesdk_app_id": "1:967283203315:android:2f26ff2790946d2b89ab86",
+        "android_client_info": {
+          "package_name": "com.example.cssemobileapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "967283203315-fa4pak84i5i4nr6v3e1gn6qjpv3ma2p8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDK7xR1oXQhlHosF7cTI0vqZDEpEYNwybs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "967283203315-fa4pak84i5i4nr6v3e1gn6qjpv3ma2p8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:967283203315:android:57ccd6e854cec6c189ab86",
         "android_client_info": {
           "package_name": "com.example.easyorm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "967283203315-fa4pak84i5i4nr6v3e1gn6qjpv3ma2p8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDK7xR1oXQhlHosF7cTI0vqZDEpEYNwybs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "967283203315-fa4pak84i5i4nr6v3e1gn6qjpv3ma2p8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:967283203315:android:fd81a68a1d9b42de89ab86",
+        "android_client_info": {
+          "package_name": "com.example.simplesurveycreator"
         }
       },
       "oauth_client": [

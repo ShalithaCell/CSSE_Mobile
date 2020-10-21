@@ -13,8 +13,22 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
+import android.widget.TextView;
+import android.widget.Toast;
 
+import com.example.cssemobileapp.Model.Item;
 import com.example.cssemobileapp.R;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
+import com.jaredrummler.materialspinner.MaterialSpinner;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -25,6 +39,10 @@ public class AddItemsForOrder extends Fragment {
 
     ImageView addnewitembtn;
     LinearLayout list;
+    MaterialSpinner _spinner;
+
+    List<String> no;
+
 
     public AddItemsForOrder() {
         // Required empty public constructor
@@ -46,8 +64,7 @@ public class AddItemsForOrder extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view =  inflater.inflate(R.layout.fragment_add_items_for_order, container, false);
-
+        View view = inflater.inflate(R.layout.fragment_add_items_for_order, container, false);
 
         return view;
     }
@@ -58,15 +75,38 @@ public class AddItemsForOrder extends Fragment {
         addnewitembtn = view.findViewById(R.id.addnewitembtn);
         list = view.findViewById(R.id.list);
 
+        no = new ArrayList<String>();
+        _spinner = view.findViewById(R.id.spinner);
+
         addnewitembtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                View journeyView = getLayoutInflater().inflate(R.layout.additemcardview,null,false);
+                View journeyView = getLayoutInflater().inflate(R.layout.additemcardview, null, false);
+
+                MaterialSpinner spinner = (MaterialSpinner) journeyView.findViewById(R.id.spinner);
+                spinner.setItems(no);
+
                 journeyView.findViewById(R.id.aaa);
                 list.addView(journeyView);
             }
         });
+
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+
+        db.collection("items")
+                .get()
+                .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+                    @Override
+                    public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                        if (!queryDocumentSnapshots.isEmpty()) {
+                            List<DocumentSnapshot> list = queryDocumentSnapshots.getDocuments();
+                            for (DocumentSnapshot d : list) {
+                                Item i = d.toObject(Item.class);
+                                no.add(i.getName());
+                            }
+                        }
+                    }
+
+                });
     }
-
-
 }
