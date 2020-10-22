@@ -46,6 +46,8 @@ public class AddItemsForOrder extends Fragment {
 
     Button save;
 
+    ImageView delete;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -84,6 +86,15 @@ public class AddItemsForOrder extends Fragment {
                 MaterialSpinner spinner1 = (MaterialSpinner) journeyView.findViewById(R.id.spinner_supplier);
                 TextView spinner_price = (TextView) journeyView.findViewById(R.id.spinner_price);
                 TextView spinner_qty = (TextView) journeyView.findViewById(R.id.spinner_aqty);
+
+                ImageView delete = (ImageView) journeyView.findViewById(R.id.delete_pending_order);
+
+                delete.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        journeyView.setVisibility(View.GONE);
+                    }
+                });
 
                 spinner.setOnItemSelectedListener(new MaterialSpinner.OnItemSelectedListener() {
                     @Override

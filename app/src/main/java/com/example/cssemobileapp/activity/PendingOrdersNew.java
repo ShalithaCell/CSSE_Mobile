@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.example.cssemobileapp.Model.Item;
@@ -22,6 +23,7 @@ import java.util.List;
 public class PendingOrdersNew extends Fragment {
 
     LinearLayout list_new;
+    RelativeLayout progressBar;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -30,6 +32,9 @@ public class PendingOrdersNew extends Fragment {
         View view =  inflater.inflate(R.layout.fragment_pending_orders_new, container, false);
 
         list_new = view.findViewById(R.id.orders_list);
+        progressBar = view.findViewById(R.id.progress_bar);
+
+        progressBar.setVisibility(View.VISIBLE);
 
         FirebaseFirestore db = FirebaseFirestore.getInstance();
 
@@ -60,6 +65,8 @@ public class PendingOrdersNew extends Fragment {
                                 supplier.setText(i.getSupplier());
                                 price.setText(i.getPrice());
                                 qty.setText(i.getQty());
+
+                                progressBar.setVisibility(View.GONE);
 
                                 list_new.addView(card);
                             }
