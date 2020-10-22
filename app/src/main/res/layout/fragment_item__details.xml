@@ -1,14 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".activity.Item_Details">
-
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:background="@color/colorWhite"
+        tools:context=".activity.Item_Details">
 
-</FrameLayout>
+        <!-- TODO: Update blank fragment layout -->
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="116dp"
+        android:background="@drawable/half_top_circle"
+        android:padding="20dp">
+
+        <ImageView
+            android:id="@+id/avatar"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:background="@drawable/construction3"
+            android:src="@drawable/construction3" />
+
+        <TextView
+            android:id="@+id/fullName"
+            android:layout_width="181dp"
+            android:layout_height="49dp"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@+id/avatar"
+            android:fontFamily="@font/muli_black"
+            android:includeFontPadding="false"
+            android:text="Items"
+            android:textAllCaps="true"
+            android:textColor="@color/colorBlack"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="502dp"
+        android:layout_marginTop="130dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <LinearLayout
+            android:id="@+id/journey_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+    </ScrollView>
+
+</RelativeLayout>
