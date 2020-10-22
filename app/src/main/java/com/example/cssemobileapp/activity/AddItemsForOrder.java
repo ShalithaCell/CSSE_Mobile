@@ -17,6 +17,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.cssemobileapp.Model.Item;
+import com.example.cssemobileapp.Model.Supplier;
 import com.example.cssemobileapp.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -39,9 +40,10 @@ public class AddItemsForOrder extends Fragment {
 
     ImageView addnewitembtn;
     LinearLayout list;
-    MaterialSpinner _spinner;
 
+    List<String> no2;
     List<String> no;
+    List<String> no3;
 
 
     public AddItemsForOrder() {
@@ -76,7 +78,9 @@ public class AddItemsForOrder extends Fragment {
         list = view.findViewById(R.id.list);
 
         no = new ArrayList<String>();
-        _spinner = view.findViewById(R.id.spinner);
+        no2 = new ArrayList<String>();
+        no3 = new ArrayList<String>();
+
 
         addnewitembtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -86,7 +90,10 @@ public class AddItemsForOrder extends Fragment {
                 MaterialSpinner spinner = (MaterialSpinner) journeyView.findViewById(R.id.spinner);
                 spinner.setItems(no);
 
-                journeyView.findViewById(R.id.aaa);
+                MaterialSpinner spinner2 = (MaterialSpinner) journeyView.findViewById(R.id.spinner_supplier);
+                spinner2.setItems(no3);
+
+
                 list.addView(journeyView);
             }
         });
@@ -103,6 +110,24 @@ public class AddItemsForOrder extends Fragment {
                             for (DocumentSnapshot d : list) {
                                 Item i = d.toObject(Item.class);
                                 no.add(i.getName());
+                                no2.add(i.getSupplier());
+                            }
+
+                            for (int i = 0; i < no2.size(); i++){
+                                db.collection("suppliers")
+                                        .get()
+                                        .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+                                            @Override
+                                            public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                                                List<DocumentSnapshot> list = queryDocumentSnapshots.getDocuments();
+                                                for(DocumentSnapshot d :list){
+                                                    Supplier i = d.toObject(Supplier.class);
+                                                    System.out.println(no2.get(0));
+                                                    if(i.equals(no2.get(0)))
+                                                        no3.add(i.getName());
+                                                }
+                                            }
+                                        });
                             }
                         }
                     }
