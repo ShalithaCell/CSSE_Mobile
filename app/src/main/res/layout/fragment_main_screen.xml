@@ -19,7 +19,7 @@
 
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="150dp"
+            android:layout_height="204dp"
             android:layout_marginTop="20dp"
             android:contentDescription="@string/surveyman"
             android:src="@drawable/construction1" />
@@ -45,7 +45,7 @@
             android:id="@+id/palceorderbn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="50dp"
             android:width="300dp"
             android:background="@drawable/button7"
             android:text="Place New Order"
@@ -57,22 +57,10 @@
             android:id="@+id/vieworderstatusbtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="100dp"
             android:width="300dp"
             android:background="@drawable/button7"
             android:text="View Order status"
-            android:textColor="@color/WhiteSmoke"
-            android:textSize="15sp"
-            android:textStyle="bold" />
-
-        <Button
-            android:id="@+id/deliveryordersbtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="60dp"
-            android:width="300dp"
-            android:background="@drawable/button7"
-            android:text="Delivery Oders "
             android:textColor="@color/WhiteSmoke"
             android:textSize="15sp"
             android:textStyle="bold" />

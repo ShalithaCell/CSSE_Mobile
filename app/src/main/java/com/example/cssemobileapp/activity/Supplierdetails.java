@@ -1,30 +1,26 @@
 package com.example.cssemobileapp.activity;
 
 import android.os.Bundle;
+
+import androidx.fragment.app.Fragment;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import androidx.fragment.app.Fragment;
-
 import com.example.cssemobileapp.R;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link templatemenue#newInstance} factory method to
- * create an instance of this fragment.
- */
-public class templatemenue extends Fragment {
+
+public class Supplierdetails extends Fragment {
 
 
-    public templatemenue() {
+    public Supplierdetails() {
         // Required empty public constructor
     }
 
-
-    public static templatemenue newInstance(String param1, String param2) {
-        templatemenue fragment = new templatemenue();
-
+    public static Supplierdetails newInstance(String param1, String param2) {
+        Supplierdetails fragment = new Supplierdetails();
+       ;
         return fragment;
     }
 
@@ -38,11 +34,6 @@ public class templatemenue extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-
-        View rootView = inflater.inflate(R.layout.fragment_templatemenue, container, false);
-
-
-        return rootView;
+        return inflater.inflate(R.layout.fragment_supplierdetails, container, false);
     }
 }
-
