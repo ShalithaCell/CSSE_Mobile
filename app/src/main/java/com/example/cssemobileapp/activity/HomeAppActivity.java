@@ -30,14 +30,14 @@ public class HomeAppActivity extends AppCompatActivity {
         spaceNavigationView.setCentreButtonSelected();
 
         //set category screen
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer, new MainScreen()).addToBackStack(null).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer, new Main__Bord()).addToBackStack(null).commit();
 
         spaceNavigationView.setSpaceOnClickListener(new SpaceOnClickListener() {
             @Override
             public void onCentreButtonClick() {
                 //Toast.makeText(HomeActivity.this,"onCentreButtonClick", Toast.LENGTH_SHORT).show();
 
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer, new MainScreen()).addToBackStack(null).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer, new Main__Bord()).addToBackStack(null).commit();
             }
 
             @Override
