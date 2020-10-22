@@ -10,11 +10,17 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.example.cssemobileapp.R;
+import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
 
 
 public class PlaceNewOrder extends Fragment {
 
-    private Button btn1,btn2;
+    private Button btn1, btn2;
+
+    TextInputLayout orderId, orderAddress, orderDate;
+    String id, address, date;
+
     public PlaceNewOrder() {
         // Required empty public constructor
     }
@@ -37,17 +43,43 @@ public class PlaceNewOrder extends Fragment {
 
         View rootView = inflater.inflate(R.layout.fragment_place_new_order, container, false);
 
-        btn1 = (Button)rootView.findViewById(R.id.additempagebtn);
+        btn1 = (Button) rootView.findViewById(R.id.additempagebtn);
 
-        btn2 = (Button)rootView.findViewById(R.id.exitbtn2);
+        btn2 = (Button) rootView.findViewById(R.id.exitbtn2);
+
+        orderId = rootView.findViewById(R.id.order_id);
+        orderAddress = rootView.findViewById(R.id.order_address);
+        orderDate = rootView.findViewById(R.id.order_date);
 
         btn1.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
 
-                getFragmentManager().beginTransaction().replace(R.id.fragmentContainer, new AddItemsForOrder()).addToBackStack(null).commit();
+                id = orderId.getEditText().getText().toString();
+                address = orderAddress.getEditText().getText().toString();
+                date = orderDate.getEditText().getText().toString();
 
+                if (id.equals("")) {
+                    orderId.setErrorEnabled(true);
+                    orderId.setError("Order ID cannot be empty");
+                } else if (address.equals("")) {
+                    orderAddress.setErrorEnabled(true);
+                    orderAddress.setError("Order Date cannot be empty");
+                } else if (date.equals("")) {
+                    orderDate.setErrorEnabled(true);
+                    orderDate.setError("Order Address cannot be empty");
+                }else{
+                    AddItemsForOrder addItemsForOrder = new AddItemsForOrder();
+                    Bundle args = new Bundle();
+                    args.putString("id", id);
+                    args.putString("address", address);
+                    args.putString("date", date);
+
+                    addItemsForOrder.setArguments(args);
+
+                    getFragmentManager().beginTransaction().add(R.id.fragmentContainer, addItemsForOrder).addToBackStack(null).commit();
+                }
             }
 
         });
@@ -56,7 +88,6 @@ public class PlaceNewOrder extends Fragment {
 
             @Override
             public void onClick(View view) {
-
                 getFragmentManager().beginTransaction().replace(R.id.fragmentContainer, new MainScreen()).addToBackStack(null).commit();
 
             }
@@ -66,4 +97,5 @@ public class PlaceNewOrder extends Fragment {
 
         return rootView;
     }
+
 }
