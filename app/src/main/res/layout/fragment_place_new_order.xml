@@ -59,7 +59,7 @@
             android:layout_marginTop="30dp">
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/signup_fullname"
+                android:id="@+id/order_id"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -87,11 +87,11 @@
 
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/signup_username"
+                android:id="@+id/order_address"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/signup_fullname"
+                android:layout_below="@+id/order_id"
                 android:textColorHint="@color/Black"
                 app:boxStrokeColor="@color/Black"
                 app:boxStrokeWidthFocused="2dp"
@@ -116,11 +116,11 @@
 
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/signup_id_passport"
+                android:id="@+id/order_date"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/signup_username"
+                android:layout_below="@+id/order_address"
                 android:textColorHint="@color/Black"
                 app:boxStrokeColor="@color/Black"
                 app:boxStrokeWidthFocused="2dp"
