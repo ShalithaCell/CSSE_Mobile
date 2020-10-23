@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
 
-    android:layout_height="match_parent"
-    android:backgroundTint="@color/CadetBlue">
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -19,7 +18,7 @@
 
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="204dp"
+            android:layout_height="156dp"
             android:layout_marginTop="20dp"
             android:contentDescription="@string/surveyman"
             android:src="@drawable/construction1" />
@@ -45,7 +44,7 @@
             android:id="@+id/palceorderbn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="80dp"
             android:width="300dp"
             android:background="@drawable/button7"
             android:text="Place New Order"

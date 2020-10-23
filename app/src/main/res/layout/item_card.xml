@@ -28,6 +28,7 @@
                 android:layout_marginTop="15dp"
                 android:fontFamily="@font/comfortaa_light"
                 android:text="Item Name"
+                android:textColor="@color/Black"
                 android:textSize="18sp" />
 
             <TextView
@@ -38,6 +39,7 @@
                 android:layout_marginTop="15dp"
                 android:fontFamily="@font/comfortaa_light"
                 android:text="Item Name"
+                android:textColor="@color/Black"
                 android:textSize="18sp" />
 
             <TextView
@@ -48,6 +50,7 @@
                 android:layout_marginLeft="20dp"
                 android:fontFamily="@font/comfortaa_light"
                 android:text="Supplier"
+                android:textColor="@color/Black"
                 android:textSize="18sp" />
 
             <TextView
@@ -58,6 +61,7 @@
                 android:layout_marginLeft="140dp"
                 android:fontFamily="@font/comfortaa_light"
                 android:text="Supplier"
+                android:textColor="@color/Black"
                 android:textSize="18sp" />
 
             <TextView
@@ -70,6 +74,7 @@
                 android:layout_marginBottom="20dp"
                 android:fontFamily="@font/comfortaa_light"
                 android:text="Availability"
+                android:textColor="@color/Black"
                 android:textSize="18sp" />
 
             <TextView
@@ -80,6 +85,7 @@
                 android:layout_marginLeft="140dp"
                 android:fontFamily="@font/comfortaa_light"
                 android:text="Unit Price"
+                android:textColor="@color/Black"
                 android:textSize="18sp" />
 
 
@@ -91,6 +97,7 @@
                 android:layout_marginBottom="20dp"
                 android:fontFamily="@font/comfortaa_light"
                 android:text="Unit Price"
+                android:textColor="@color/Black"
                 android:textSize="18sp" />
 
             <TextView
@@ -101,6 +108,7 @@
                 android:layout_marginLeft="140dp"
                 android:fontFamily="@font/comfortaa_light"
                 android:text="Quantity"
+                android:textColor="@color/Black"
                 android:textSize="18sp" />
 
 
@@ -113,6 +121,7 @@
                 android:layout_marginBottom="20dp"
                 android:fontFamily="@font/comfortaa_light"
                 android:text="Quantity"
+                android:textColor="@color/Black"
                 android:textSize="18sp" />
 
             <TextView
@@ -123,6 +132,7 @@
                 android:layout_marginLeft="140dp"
                 android:fontFamily="@font/comfortaa_light"
                 android:text="Availability"
+                android:textColor="@color/Black"
                 android:textSize="18sp" />
 
 

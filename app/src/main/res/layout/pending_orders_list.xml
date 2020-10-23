@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/Lavender"
     android:orientation="vertical">
 
     <androidx.cardview.widget.CardView
@@ -10,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="12dp"
-        android:background="@color/colorMainBackground"
+        android:background="@color/patient_theme_light"
         app:cardCornerRadius="12dp"
         app:cardElevation="6dp">
 
@@ -22,10 +23,11 @@
                 android:id="@+id/journey_card"
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/comfortaa_light"
                 android:layout_marginLeft="20dp"
-                android:text="Order ID : "
                 android:layout_marginTop="15dp"
+                android:fontFamily="@font/comfortaa_light"
+                android:text="Order ID : "
+                android:textColor="@color/Black"
                 android:textSize="18sp" />
 
             <TextView
@@ -36,6 +38,7 @@
                 android:layout_marginTop="15dp"
                 android:fontFamily="@font/comfortaa_light"
                 android:text="@string/test"
+                android:textColor="@color/Black"
                 android:textSize="18sp" />
 
             <TextView
@@ -43,119 +46,131 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/journey_card"
-                android:fontFamily="@font/comfortaa_light"
                 android:layout_marginLeft="20dp"
+                android:fontFamily="@font/comfortaa_light"
                 android:text="Order Addrss : "
+                android:textColor="@color/Black"
                 android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/order_address"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="170dp"
                 android:layout_below="@+id/order_id"
+                android:layout_marginLeft="170dp"
                 android:fontFamily="@font/comfortaa_light"
                 android:text="@string/test"
+                android:textColor="@color/Black"
                 android:textSize="18sp" />
 
             <TextView
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/price_desc"
-                android:fontFamily="@font/comfortaa_light"
                 android:layout_marginLeft="20dp"
-                android:text="Order Date : "
                 android:layout_marginBottom="20dp"
+                android:fontFamily="@font/comfortaa_light"
+                android:text="Order Date : "
+                android:textColor="@color/Black"
                 android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/order_date"
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="170dp"
                 android:layout_below="@+id/order_address"
+                android:layout_marginLeft="170dp"
                 android:fontFamily="@font/comfortaa_light"
                 android:text="@string/test"
+                android:textColor="@color/Black"
                 android:textSize="18sp" />
 
             <TextView
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/order_date"
-                android:fontFamily="@font/comfortaa_light"
                 android:layout_marginLeft="20dp"
-                android:text="Item : "
                 android:layout_marginBottom="20dp"
+                android:fontFamily="@font/comfortaa_light"
+                android:text="Item : "
+                android:textColor="@color/Black"
                 android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/item"
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="170dp"
                 android:layout_below="@+id/order_date"
+                android:layout_marginLeft="170dp"
                 android:fontFamily="@font/comfortaa_light"
                 android:text="@string/test"
+                android:textColor="@color/Black"
                 android:textSize="18sp" />
 
             <TextView
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/item"
-                android:fontFamily="@font/comfortaa_light"
                 android:layout_marginLeft="20dp"
-                android:text="Suplier : "
                 android:layout_marginBottom="20dp"
+                android:fontFamily="@font/comfortaa_light"
+                android:text="Suplier : "
+                android:textColor="@color/Black"
                 android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/supplier"
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="170dp"
                 android:layout_below="@+id/item"
+                android:layout_marginLeft="170dp"
                 android:fontFamily="@font/comfortaa_light"
                 android:text="@string/test"
+                android:textColor="@color/Black"
                 android:textSize="18sp" />
 
             <TextView
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/supplier"
-                android:fontFamily="@font/comfortaa_light"
                 android:layout_marginLeft="20dp"
-                android:text="Price : "
                 android:layout_marginBottom="20dp"
+                android:fontFamily="@font/comfortaa_light"
+                android:text="Price : "
+                android:textColor="@color/Black"
                 android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/price"
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="170dp"
                 android:layout_below="@+id/supplier"
+                android:layout_marginLeft="170dp"
                 android:fontFamily="@font/comfortaa_light"
                 android:text="@string/test"
+                android:textColor="@color/Black"
                 android:textSize="18sp" />
 
             <TextView
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/price"
-                android:fontFamily="@font/comfortaa_light"
                 android:layout_marginLeft="20dp"
-                android:text="Need Qty : "
                 android:layout_marginBottom="20dp"
+                android:fontFamily="@font/comfortaa_light"
+                android:text="Need Qty : "
+                android:textColor="@color/Black"
                 android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/qty"
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="170dp"
                 android:layout_below="@+id/price"
+                android:layout_marginLeft="170dp"
                 android:fontFamily="@font/comfortaa_light"
                 android:text="@string/test"
+                android:textColor="@color/Black"
                 android:textSize="18sp" />
 
         </RelativeLayout>

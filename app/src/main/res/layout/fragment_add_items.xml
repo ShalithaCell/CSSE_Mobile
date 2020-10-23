@@ -45,7 +45,6 @@
                             android:id="@+id/btnBack"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/backbtn"
                             android:textColor="@color/white_with_alpha"
                             android:textStyle="bold" />
 
