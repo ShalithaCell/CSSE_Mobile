@@ -6,14 +6,14 @@ public class Supplier {
 
     public Supplier(){}
 
-    public Supplier(String contactNumber, String email, String location, String name, String userID, boolean availability) {
+    public Supplier(String contactNumber, String email, String location, String name, String userID) {
         this.contactNumber = contactNumber;
         this.email = email;
         this.location = location;
         this.name = name;
         this.userID = userID;
-        this.availability = availability;
     }
+
 
     public String getContactNumber() {
         return contactNumber;

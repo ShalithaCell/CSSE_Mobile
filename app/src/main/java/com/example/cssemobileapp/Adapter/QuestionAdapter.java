@@ -2,7 +2,6 @@ package com.example.cssemobileapp.Adapter;
 
 import android.app.Application;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,16 +11,13 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.cssemobileapp.Model.Options;
-import com.example.cssemobileapp.Model.Items;
 import com.example.cssemobileapp.R;
 import com.example.cssemobileapp.utils.QuestionTypes;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
@@ -32,7 +28,7 @@ import java.util.List;
 
 public class QuestionAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
-    private List<Items> itemList;
+
     private Context context;
     private Application application;
 
@@ -40,11 +36,6 @@ public class QuestionAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
     String[] ITEMS = {"Option 1", "Option 2", "Option 3", "Option 4", "Option 5", "Option 6"};
     ArrayAdapter<String> adapterDDL;
 
-    public QuestionAdapter (List<Items> list, Context _context) {
-        itemList = list;
-        context = _context;
-
-    }
 
     @NonNull
     @Override
@@ -67,14 +58,15 @@ public class QuestionAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
         }
     }
 
-    @Override
-    public int getItemCount() {
-        return itemList.size();
-    }
 
     @Override
     public int getItemViewType(int position) {
             return QuestionTypes.TEXT.ordinal();
+    }
+
+    @Override
+    public int getItemCount() {
+        return 0;
     }
 
     public class TextViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener,View.OnLongClickListener {
@@ -164,7 +156,7 @@ public class QuestionAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
     }
 
         private void InitLayoutText(TextViewHolder holder, int pos) {
-            Items Item = itemList.get(pos);
+
 
             FirebaseFirestore rootRef = FirebaseFirestore.getInstance();
             CollectionReference itemsRef = rootRef.collection("items ");
@@ -185,8 +177,7 @@ public class QuestionAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
                     }
                 }
             });
-            holder.itemQty.setText(Item.getQty());
-            holder.unitPrice.setText(Item.getUnitPrice());
+
 
         }
 

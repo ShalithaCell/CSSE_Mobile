@@ -2,7 +2,6 @@ package com.example.cssemobileapp.activity;
 
 import android.os.Bundle;
 
-import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.DividerItemDecoration;
@@ -12,24 +11,16 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.Spinner;
 
 import com.example.cssemobileapp.Adapter.CallBackListener;
 import com.example.cssemobileapp.Adapter.QuestionAdapter;
 import com.example.cssemobileapp.Model.Options;
-import com.example.cssemobileapp.Model.Items;
 import com.example.cssemobileapp.R;
 import com.example.cssemobileapp.utils.QuestionTypes;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
 
 
-import com.google.firebase.firestore.CollectionReference;
-import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.QueryDocumentSnapshot;
-import com.google.firebase.firestore.QuerySnapshot;
 import com.nambimobile.widgets.efab.FabOption;
 
 import java.util.ArrayList;
@@ -39,7 +30,7 @@ import java.util.concurrent.TimeUnit;
 
 public class addItems extends Fragment implements CallBackListener {
 
-    public List<Items> questionList = new ArrayList<>();
+
     private RecyclerView recyclerView;
     private QuestionAdapter mAdapter;
     private ImageView btnPublish;
@@ -80,7 +71,6 @@ public class addItems extends Fragment implements CallBackListener {
 
 
 
-        mAdapter = new QuestionAdapter(questionList, getContext());
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getActivity().getApplicationContext());
         recyclerView.setLayoutManager(mLayoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
