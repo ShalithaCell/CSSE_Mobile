@@ -37,20 +37,14 @@
 
     </RelativeLayout>
 
-
-    <ScrollView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/items_recycler_view"
         android:layout_width="match_parent"
-        android:layout_height="502dp"
-        android:layout_marginTop="130dp"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp">
+        android:layout_height="587dp"
+        android:layout_below="@+id/header"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="28dp"
+        android:layout_marginBottom="0dp" />
 
-        <LinearLayout
-            android:id="@+id/journey_list"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" />
-
-    </ScrollView>
 
 </RelativeLayout>

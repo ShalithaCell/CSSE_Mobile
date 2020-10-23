@@ -4,34 +4,46 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
+import com.example.cssemobileapp.Adapter.ItemsAdapter;
+import com.example.cssemobileapp.Adapter.SupplierAdapter;
 import com.example.cssemobileapp.Model.Item;
+import com.example.cssemobileapp.Model.RejectedOrderModel;
+import com.example.cssemobileapp.Model.Supplier;
 import com.example.cssemobileapp.R;
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+
+import static android.content.ContentValues.TAG;
 
 
 public class Item_Details extends Fragment {
 
+    public RecyclerView recyclerView;
 
-    LinearLayout list;
+    public ArrayList<Item> itemList = new ArrayList<Item>();
 
-    List<String> no1;
-    List<String> no2;
-    List<String> no3;
-    List<String> no4;
-    List<Boolean> no5;
+    public CardView cardView;
+
 
     public Item_Details() {
         // Required empty public constructor
@@ -40,7 +52,6 @@ public class Item_Details extends Fragment {
 
     public static Item_Details newInstance(String param1, String param2) {
         Item_Details fragment = new Item_Details();
-
         return fragment;
     }
 
@@ -54,50 +65,39 @@ public class Item_Details extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+        View rootView =  inflater.inflate(R.layout.fragment_item__details, container, false);
 
-        View view = inflater.inflate(R.layout.fragment_item__details, container, false);
-
-        return view;
-    }
-
-
-
-    @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-
-        list = view.findViewById(R.id.list);
-
-        no1 = new ArrayList<String>();
-        no2 = new ArrayList<String>();
-        no3 = new ArrayList<String>();
-        no4 = new ArrayList<String>();
-        no5 = new ArrayList<Boolean>();
-
-
+        recyclerView = rootView.findViewById(R.id.items_recycler_view);
 
         FirebaseFirestore db = FirebaseFirestore.getInstance();
-
         db.collection("items")
                 .get()
-                .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
-                    @Override
-                    public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
-                        if (!queryDocumentSnapshots.isEmpty()) {
-                            List<DocumentSnapshot> list = queryDocumentSnapshots.getDocuments();
-                            for (DocumentSnapshot d : list) {
-                                Item i = d.toObject(Item.class);
-                                no1.add(i.getName());
-                                no2.add(i.getSupplier());
-                                no3.add(i.getUnitPrice());
-                                no4.add(i.getQty());
-                                no5.add(i.getAvailability());
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        if (task.isSuccessful()) {
+                            for (QueryDocumentSnapshot document : task.getResult()) {
+                                Log.d(TAG, document.getId() + " => " + document.getData());
+                                Map<String,Object> itemsHashMap = document.getData();
+                                Item item = new Item(itemsHashMap.get("availability").toString(),itemsHashMap.get("name").toString(),itemsHashMap.get("qty").toString(),itemsHashMap.get("supplier").toString(),itemsHashMap.get("unitPrice").toString());
+                                if (itemsHashMap.get("availability").toString() == "true"){
+                                    item.setAvailability("Available");
+                                }else{
+                                    item.setAvailability("Not-available");
+                                }
+                                itemList.add(item);
                             }
-
-
+                            recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+                            ItemsAdapter myAdapter = new ItemsAdapter(getContext(), itemList);
+                            recyclerView.setAdapter(myAdapter);
+                        } else {
+                            Log.w(TAG, "Error getting documents.", task.getException());
                         }
                     }
-
                 });
+
+
+        return rootView;
     }
+
+
 }

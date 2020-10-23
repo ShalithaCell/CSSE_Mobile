@@ -1,4 +1,4 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView  xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -8,7 +8,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/journeys"
+            android:id="@+id/Supplier_card"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="12dp"
@@ -32,11 +32,15 @@
                     android:textSize="18sp" />
 
                 <TextView
-                    android:id="@+id/journey_desc"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/supplier_id"
+                    android:layout_width="222dp"
                     android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="1dp"
                     android:layout_marginLeft="140dp"
                     android:layout_marginTop="15dp"
+                    android:layout_marginEnd="23dp"
+                    android:layout_toEndOf="@+id/SupplierIdcard"
                     android:fontFamily="@font/comfortaa_light"
                     android:text="Supplier Id"
                     android:textColor="@color/Black"
@@ -54,10 +58,10 @@
                     android:textSize="18sp" />
 
                 <TextView
-                    android:id="@+id/journey_price"
-                    android:layout_width="120dp"
+                    android:id="@+id/supplier_name"
+                    android:layout_width="234dp"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/journey_desc"
+                    android:layout_below="@id/supplier_id"
                     android:layout_marginLeft="140dp"
                     android:fontFamily="@font/comfortaa_light"
                     android:text="Name"
@@ -70,24 +74,25 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/price_desc"
                     android:layout_marginLeft="20dp"
-                    android:layout_marginTop="44dp"
+                    android:layout_marginTop="57dp"
                     android:layout_marginBottom="20dp"
                     android:fontFamily="@font/comfortaa_light"
                     android:text="Location"
                     android:textColor="@color/Black"
                     android:textSize="18sp" />
 
+
                 <TextView
-                    android:id="@+id/journey_date"
-                    android:layout_width="120dp"
+                    android:id="@+id/supplier_contact"
+                    android:layout_width="239dp"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/journey_price"
+                    android:layout_below="@id/supplier_name"
                     android:layout_marginLeft="140dp"
+                    android:layout_marginTop="0dp"
                     android:fontFamily="@font/comfortaa_light"
                     android:text="Contact No"
                     android:textColor="@color/Black"
                     android:textSize="18sp" />
-
 
                 <TextView
                     android:layout_width="120dp"
@@ -100,24 +105,25 @@
                     android:textColor="@color/Black"
                     android:textSize="18sp" />
 
+
                 <TextView
-                    android:id="@+id/qty"
-                    android:layout_width="120dp"
+                    android:id="@+id/supplier_email"
+                    android:layout_width="237dp"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/journey_date"
+                    android:layout_below="@+id/supplier_contact"
                     android:layout_marginLeft="140dp"
+                    android:layout_marginTop="0dp"
                     android:fontFamily="@font/comfortaa_light"
                     android:text="Email"
                     android:textColor="@color/Black"
                     android:textSize="18sp" />
 
-
                 <TextView
-                    android:layout_width="120dp"
+                    android:layout_width="119dp"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/price_desc"
                     android:layout_marginLeft="20dp"
-                    android:layout_marginTop="18dp"
+                    android:layout_marginTop="27dp"
                     android:layout_marginBottom="20dp"
                     android:fontFamily="@font/comfortaa_light"
                     android:text="Email"
@@ -125,11 +131,12 @@
                     android:textSize="18sp" />
 
                 <TextView
-                    android:id="@+id/avl"
-                    android:layout_width="120dp"
+                    android:id="@+id/supplier_location"
+                    android:layout_width="231dp"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/qty"
+                    android:layout_below="@+id/supplier_email"
                     android:layout_marginLeft="140dp"
+                    android:layout_marginTop="3dp"
                     android:fontFamily="@font/comfortaa_light"
                     android:text="Location"
                     android:textColor="@color/Black"
@@ -140,4 +147,4 @@
 
         </androidx.cardview.widget.CardView>
 
-    </LinearLayout>
+    </androidx.cardview.widget.CardView>

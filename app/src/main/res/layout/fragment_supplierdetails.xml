@@ -38,20 +38,15 @@
 
         </RelativeLayout>
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/suppliers_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="468dp"
+        android:layout_below="@+id/header"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="39dp"
+        android:layout_marginBottom="108dp"
+        android:foregroundGravity="center" />
 
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="502dp"
-            android:layout_marginTop="130dp"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp">
 
-            <LinearLayout
-                android:id="@+id/supplier_list"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical" />
-
-        </ScrollView>
-
-    </RelativeLayout>
+</RelativeLayout>
