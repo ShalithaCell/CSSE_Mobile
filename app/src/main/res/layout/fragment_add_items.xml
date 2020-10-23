@@ -96,16 +96,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recycler_view_inventory"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:scrollbars="vertical"
-                android:layout_marginTop="10dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtSurveyName" />
-
             <com.nambimobile.widgets.efab.ExpandableFabLayout
                 android:id="@+id/expandable_fab_layout"
                 android:layout_width="match_parent"
@@ -145,6 +135,12 @@
                     app:label_backgroundColor="@color/transparent_blue"
                     app:label_text="Add Item" />
 
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_view_inventory"
+                    android:layout_width="match_parent"
+                    android:layout_height="646dp"
+                    android:layout_marginTop="10dp"
+                    android:scrollbars="vertical" />
 
 
             </com.nambimobile.widgets.efab.ExpandableFabLayout>

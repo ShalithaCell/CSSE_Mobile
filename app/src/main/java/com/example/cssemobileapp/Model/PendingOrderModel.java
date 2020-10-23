@@ -1,14 +1,89 @@
 package com.example.cssemobileapp.Model;
 
+import android.util.Log;
+
+import static android.content.ContentValues.TAG;
+
 public class PendingOrderModel {
-    private String pendingOrderId;
+    private String id;
+    private String referenceID;
+    private String address;
+    private String amount;
+    private String dueDate;
+    private String status;
+    private String supplier;
 
 
-    public String getPendingOrderId() {
-        return pendingOrderId;
+    public PendingOrderModel() {
+
     }
 
-    public void setPendingOrderId(String pendingOrderId) {
-        this.pendingOrderId = pendingOrderId;
+    public PendingOrderModel(String referenceID, String address, String amount, String dueDate, String status, String supplier) {
+        this.referenceID = referenceID;
+        this.address = address;
+        this.amount = amount;
+        this.dueDate = dueDate;
+        this.status = status;
+        this.supplier = supplier;
+        Log.d(TAG, "pending model constructor called");
+
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getReferenceID() {
+        Log.d(TAG, "pending getreferenceid() called");
+
+        return referenceID;
+    }
+
+    public void setReferenceID(String referenceID) {
+        this.referenceID = referenceID;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getAmount() {
+        return amount;
+    }
+
+    public void setAmount(String amount) {
+        this.amount = amount;
+    }
+
+    public String getDueDate() {
+        return dueDate;
+    }
+
+    public void setDueDate(String dueDate) {
+        this.dueDate = dueDate;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public String getSupplier() {
+        return supplier;
+    }
+
+    public void setSupplier(String supplier) {
+        this.supplier = supplier;
     }
 }

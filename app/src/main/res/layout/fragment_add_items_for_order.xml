@@ -77,6 +77,8 @@
                     android:layout_marginTop="10dp"
                     android:layout_weight="1"
                     android:src="@drawable/ic_add_black_24dp" />
+
+
             </LinearLayout>
 
             <ScrollView
@@ -85,10 +87,11 @@
                 android:layout_marginTop="40dp">
 
                 <LinearLayout
+                    android:id="@+id/list"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:id="@+id/list"
-                    android:orientation="vertical"/>
+                    android:orientation="vertical">
+                </LinearLayout>
 
             </ScrollView>
 

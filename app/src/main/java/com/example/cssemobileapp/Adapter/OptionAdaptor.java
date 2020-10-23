@@ -2,19 +2,15 @@ package com.example.cssemobileapp.Adapter;
 
 import android.app.Application;
 import android.content.Context;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.cssemobileapp.R;
 import com.example.cssemobileapp.Model.Options;
-import com.example.cssemobileapp.Model.Questions;
 
 import java.util.List;
 

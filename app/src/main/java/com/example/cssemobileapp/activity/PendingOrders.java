@@ -2,6 +2,7 @@ package com.example.cssemobileapp.activity;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.DefaultItemAnimator;
@@ -15,10 +16,20 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.cssemobileapp.Adapter.PendingOrderAdapter;
+import com.example.cssemobileapp.Model.Item;
 import com.example.cssemobileapp.Model.PendingOrderModel;
 import com.example.cssemobileapp.R;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
 import static android.content.ContentValues.TAG;
 
@@ -29,9 +40,11 @@ import static android.content.ContentValues.TAG;
  */
 public class PendingOrders extends Fragment {
 
-    RecyclerView recyclerView;
-    PendingOrderAdapter pendingOrderAdapter;
-    CardView cardView;
+   public RecyclerView recyclerView;
+
+    public ArrayList<PendingOrderModel> pendingList = new ArrayList<PendingOrderModel>();
+
+    public CardView cardView;
 
 
     // TODO: Rename parameter arguments, choose names that match
@@ -45,6 +58,10 @@ public class PendingOrders extends Fragment {
 
     public PendingOrders() {
         // Required empty public constructor
+    }
+    public void onStart(){
+        super.onStart();
+        //update your fragment
     }
 
     /**
@@ -68,60 +85,48 @@ public class PendingOrders extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         Log.d(TAG, "onCreate: started");
-        getList();
 
-    }
-
-    private ArrayList<PendingOrderModel> getList() {
-        ArrayList<PendingOrderModel> models = new ArrayList<>();
-
-        PendingOrderModel m = new PendingOrderModel();
-        m.setPendingOrderId("1111");
-        models.add(m);
-
-        m = new PendingOrderModel();
-        m.setPendingOrderId("2222");
-        models.add(m);
-
-        initRecyclerView();
-        return models;
-    }
-    private  void initRecyclerView(){
-        Log.d(TAG, "initRecyclerView: started");
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+      super.onCreateView(inflater,container,savedInstanceState);
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.fragment_pending_orders, container, false);
         recyclerView = rootView.findViewById(R.id.recycler_view_pending_orders);
 
-        LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity().getApplicationContext());
-        recyclerView.setLayoutManager(layoutManager);
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+        db.collection("orders").whereEqualTo("status", 1)
+                .get()
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        if (task.isSuccessful()) {
+                            for (QueryDocumentSnapshot document : task.getResult()) {
+                                Log.d(TAG, document.getId() + " => " + document.getData());
+                                Map<String, Object> pendingOrderHashMap = document.getData();
+                                PendingOrderModel pendingOrder = new PendingOrderModel(pendingOrderHashMap.get("referenceID").toString(), pendingOrderHashMap.get("address").toString(), pendingOrderHashMap.get("amount").toString(), pendingOrderHashMap.get("dueDate").toString(), pendingOrderHashMap.get("status").toString(), pendingOrderHashMap.get("supplier").toString());
+                                pendingOrder.setStatus("Pending");
+                                pendingOrder.setId(document.getId());
+                                pendingList.add(pendingOrder);
+                                }
+                            recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+                            PendingOrderAdapter myAdapter = new PendingOrderAdapter(pendingList, getContext());
+                            recyclerView.setAdapter(myAdapter);
+                            myAdapter.notifyDataSetChanged();
+                        } else {
+                            Log.w(TAG, "Error getting documents.", task.getException());
+                        }
 
-    //    pendingOrderAdapter = new PendingOrderAdapter(getContext().getList(), getContext());
-        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getActivity().getApplicationContext());
-        recyclerView.setLayoutManager(mLayoutManager);
-        recyclerView.setItemAnimator(new DefaultItemAnimator());
-        recyclerView.addItemDecoration(new DividerItemDecoration(container.getContext(), LinearLayoutManager.VERTICAL));
-        recyclerView.setAdapter(pendingOrderAdapter);
+                    }
 
-        cardView.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View view) {
-
-                getFragmentManager().beginTransaction().replace(R.id.fragmentContainer, new ViewPendingOrder()).addToBackStack(null).commit();
-
-            }
-
-        });
+                });
 
 
         return rootView;
 
     }
+
 }

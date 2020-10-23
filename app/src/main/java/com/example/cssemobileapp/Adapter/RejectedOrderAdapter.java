@@ -20,12 +20,12 @@ import java.util.ArrayList;
 public class RejectedOrderAdapter  extends RecyclerView.Adapter<RejectedOrderHolder> {
 
     Context c;
-    ArrayList<RejectedOrderModel> models;
+    ArrayList<RejectedOrderModel> rejectedList;
     CardView cardView;
 
     public RejectedOrderAdapter(Context c, ArrayList<RejectedOrderModel> models) {
         this.c = c;
-        this.models = models;
+        this.rejectedList = models;
     }
 
     @NonNull
@@ -33,20 +33,29 @@ public class RejectedOrderAdapter  extends RecyclerView.Adapter<RejectedOrderHol
     public RejectedOrderHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.card_view, null);
         cardView = (CardView) view;
-        return new RejectedOrderHolder(view);
+        return new RejectedOrderHolder(view,c);
     }
 
     @Override
     public void onBindViewHolder(@NonNull RejectedOrderHolder holder, int i) {
-        holder.rejectedOrderId.setText(models.get(i).getRejectedOrderId());
+        String code = rejectedList.get(i).getReferenceID();
+        String status = rejectedList.get(i).getStatus();
+        holder.rejectedOrderId.setText("Ref code : " + code);
+        holder.rejectedOrderStatus.setText("Order Status : " + status);
 
+        cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
     }
 
     @Override
     public int getItemCount() {
-        if (models == null) return 0;
+        if (rejectedList == null) return 0;
         else
-            return models.size();
+            return rejectedList.size();
     }
 
 }
