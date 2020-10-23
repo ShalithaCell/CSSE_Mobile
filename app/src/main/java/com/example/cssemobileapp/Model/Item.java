@@ -2,12 +2,12 @@ package com.example.cssemobileapp.Model;
 
 public class Item {
 
-    String name,qty,supplier,unitPrice, availability;
-
+    String name,qty,supplier,unitPrice;
+    boolean availability;
 
     public Item(){}
 
-    public Item(String availability, String name, String qty, String supplier, String unitPrice) {
+    public Item(boolean availability, String name, String qty, String supplier, String unitPrice) {
         this.availability = availability;
         this.name = name;
         this.qty = qty;
@@ -15,11 +15,11 @@ public class Item {
         this.unitPrice = unitPrice;
     }
 
-    public String getAvailability() {
+    public boolean getAvailability() {
         return availability;
     }
 
-    public void setAvailability(String availability) {
+    public void setAvailability(boolean availability) {
         this.availability = availability;
     }
 

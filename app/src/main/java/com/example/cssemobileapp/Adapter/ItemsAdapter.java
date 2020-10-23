@@ -42,7 +42,7 @@ public class ItemsAdapter extends RecyclerView.Adapter<ItemHolder>{
         String supplier = itemList.get(i).getSupplier();
         String qty = itemList.get(i).getQty();
         String unitPrice = itemList.get(i).getUnitPrice();
-        String availability = itemList.get(i).getAvailability();
+        String availability = itemList.get(i).getAvailability() ? "available" : "not available";
 
         holder.itemName.setText(name);
         holder.itemSupplier.setText(supplier);

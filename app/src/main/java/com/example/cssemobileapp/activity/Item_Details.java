@@ -78,11 +78,11 @@ public class Item_Details extends Fragment {
                             for (QueryDocumentSnapshot document : task.getResult()) {
                                 Log.d(TAG, document.getId() + " => " + document.getData());
                                 Map<String,Object> itemsHashMap = document.getData();
-                                Item item = new Item(itemsHashMap.get("availability").toString(),itemsHashMap.get("name").toString(),itemsHashMap.get("qty").toString(),itemsHashMap.get("supplier").toString(),itemsHashMap.get("unitPrice").toString());
-                                if (itemsHashMap.get("availability").toString() == "true"){
-                                    item.setAvailability("Available");
+                                Item item = new Item(Boolean.parseBoolean(itemsHashMap.get("availability").toString()),itemsHashMap.get("name").toString(),itemsHashMap.get("qty").toString(),itemsHashMap.get("supplier").toString(),itemsHashMap.get("unitPrice").toString());
+                                if (Boolean.parseBoolean(itemsHashMap.get("availability").toString())){
+                                    item.setAvailability(true);
                                 }else{
-                                    item.setAvailability("Not-available");
+                                    item.setAvailability(false);
                                 }
                                 itemList.add(item);
                             }
