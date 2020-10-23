@@ -38,7 +38,7 @@ public class Home_View_Orders extends Fragment {
             @Override
             public void onClick(View view) {
 
-                getFragmentManager().beginTransaction().replace(R.id.fragmentContainer, new PlaceNewOrder()).addToBackStack(null).commit();
+                getFragmentManager().beginTransaction().replace(R.id.fragmentContainer, new ActiveOrders()).addToBackStack(null).commit();
 
             }
 
@@ -62,7 +62,7 @@ public class Home_View_Orders extends Fragment {
             @Override
             public void onClick(View view) {
 
-                getFragmentManager().beginTransaction().replace(R.id.fragmentContainer, new PlaceNewOrder()).addToBackStack(null).commit();
+                getFragmentManager().beginTransaction().replace(R.id.fragmentContainer, new RejectedOrders()).addToBackStack(null).commit();
 
             }
 

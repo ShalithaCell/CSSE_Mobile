@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
             @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
             @Override
             public void run() {
-                Intent intent = new Intent(MainActivity.this,HomeAppActivity.class);
+                Intent intent = new Intent(MainActivity.this,Login.class);
 
                 Pair[] pairs = new Pair[2];
                 pairs[0] = new Pair<View, String>(image,"logo_image");
