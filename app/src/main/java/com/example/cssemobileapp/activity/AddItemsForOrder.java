@@ -38,8 +38,9 @@ public class AddItemsForOrder extends Fragment {
     LinearLayout list;
     EditText qty;
 
-    List<String> no;
+
     List<String> no2;
+    List<String> no;
     List<String> no3;
 
     String id, address, date;
@@ -142,6 +143,10 @@ public class AddItemsForOrder extends Fragment {
                     }
                 });
                 journeyView.findViewById(R.id.aaa);
+
+                MaterialSpinner spinner2 = (MaterialSpinner) journeyView.findViewById(R.id.spinner_supplier);
+                spinner2.setItems(no3);
+
                 list.addView(journeyView);
             }
         });
@@ -159,6 +164,23 @@ public class AddItemsForOrder extends Fragment {
                                 Item i = d.toObject(Item.class);
                                 no.add(i.getName());
                                 no2.add(i.getSupplier());
+                            }
+
+                            for (int i = 0; i < no2.size(); i++){
+                                db.collection("suppliers")
+                                        .get()
+                                        .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+                                            @Override
+                                            public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                                                List<DocumentSnapshot> list = queryDocumentSnapshots.getDocuments();
+                                                for(DocumentSnapshot d :list){
+                                                    Supplier i = d.toObject(Supplier.class);
+                                                    System.out.println(no2.get(0));
+                                                    if(i.equals(no2.get(0)))
+                                                        no3.add(i.getName());
+                                                }
+                                            }
+                                        });
                             }
                         }
                     }

@@ -16,7 +16,7 @@ public class MainScreen extends Fragment {
 
     private RecyclerView recyclerViewInventory;
 
-    private Button btn1,btn2,btn3;
+    private Button btn1,btn2;
 
 
 
@@ -52,7 +52,7 @@ public class MainScreen extends Fragment {
         btn1 = (Button)rootView.findViewById(R.id.palceorderbn);
 
         btn2 = (Button)rootView.findViewById(R.id.vieworderstatusbtn);
-        btn3 = (Button)rootView.findViewById(R.id.deliveryordersbtn);
+
 
         btn1.setOnClickListener(new View.OnClickListener() {
 
@@ -75,16 +75,7 @@ public class MainScreen extends Fragment {
             }
 
         });
-        btn3.setOnClickListener(new View.OnClickListener() {
 
-            @Override
-            public void onClick(View view) {
-
-                getFragmentManager().beginTransaction().replace(R.id.fragmentContainer, new Home_Delivery()).addToBackStack(null).commit();
-
-            }
-
-        });
 
 
         return rootView;
