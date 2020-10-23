@@ -26,9 +26,6 @@ public class RejectedOrderHolder extends RecyclerView.ViewHolder{
         Log.d(TAG, "pending holder called");
         this.rejectedOrderId = itemView.findViewById(R.id.order_id);
         this.rejectedOrderStatus = itemView.findViewById(R.id.order_status);
-        rejectedOrderStatus.setTextColor(Color.parseColor("#D50000"));
-
-
     }
 }
 
