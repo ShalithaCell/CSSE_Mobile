@@ -28,6 +28,7 @@
                     android:layout_marginTop="15dp"
                     android:fontFamily="@font/comfortaa_light"
                     android:text="Supplier Id"
+                    android:textColor="@color/Black"
                     android:textSize="18sp" />
 
                 <TextView
@@ -41,6 +42,8 @@
                     android:layout_marginEnd="23dp"
                     android:layout_toEndOf="@+id/SupplierIdcard"
                     android:fontFamily="@font/comfortaa_light"
+                    android:text="Supplier Id"
+                    android:textColor="@color/Black"
                     android:textSize="18sp" />
 
                 <TextView
@@ -51,6 +54,7 @@
                     android:layout_marginLeft="20dp"
                     android:fontFamily="@font/comfortaa_light"
                     android:text="Name"
+                    android:textColor="@color/Black"
                     android:textSize="18sp" />
 
                 <TextView
@@ -60,6 +64,8 @@
                     android:layout_below="@id/supplier_id"
                     android:layout_marginLeft="140dp"
                     android:fontFamily="@font/comfortaa_light"
+                    android:text="Name"
+                    android:textColor="@color/Black"
                     android:textSize="18sp" />
 
                 <TextView
@@ -72,6 +78,7 @@
                     android:layout_marginBottom="20dp"
                     android:fontFamily="@font/comfortaa_light"
                     android:text="Location"
+                    android:textColor="@color/Black"
                     android:textSize="18sp" />
 
 
@@ -83,6 +90,8 @@
                     android:layout_marginLeft="140dp"
                     android:layout_marginTop="0dp"
                     android:fontFamily="@font/comfortaa_light"
+                    android:text="Contact No"
+                    android:textColor="@color/Black"
                     android:textSize="18sp" />
 
                 <TextView
@@ -93,6 +102,7 @@
                     android:layout_marginBottom="20dp"
                     android:fontFamily="@font/comfortaa_light"
                     android:text="Contact No"
+                    android:textColor="@color/Black"
                     android:textSize="18sp" />
 
 
@@ -104,6 +114,8 @@
                     android:layout_marginLeft="140dp"
                     android:layout_marginTop="0dp"
                     android:fontFamily="@font/comfortaa_light"
+                    android:text="Email"
+                    android:textColor="@color/Black"
                     android:textSize="18sp" />
 
                 <TextView
@@ -115,6 +127,7 @@
                     android:layout_marginBottom="20dp"
                     android:fontFamily="@font/comfortaa_light"
                     android:text="Email"
+                    android:textColor="@color/Black"
                     android:textSize="18sp" />
 
                 <TextView
@@ -125,6 +138,8 @@
                     android:layout_marginLeft="140dp"
                     android:layout_marginTop="3dp"
                     android:fontFamily="@font/comfortaa_light"
+                    android:text="Location"
+                    android:textColor="@color/Black"
                     android:textSize="18sp" />
 
 

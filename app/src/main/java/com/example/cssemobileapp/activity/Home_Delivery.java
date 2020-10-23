@@ -11,11 +11,6 @@ import android.widget.Button;
 
 import com.example.cssemobileapp.R;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link Home_Delivery#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class Home_Delivery extends Fragment {
 
     private Button btn1;
@@ -54,7 +49,7 @@ public class Home_Delivery extends Fragment {
             @Override
             public void onClick(View view) {
 
-                getFragmentManager().beginTransaction().replace(R.id.fragmentContainer, new DeliveyOrders1()).addToBackStack(null).commit();
+                getFragmentManager().beginTransaction().replace(R.id.fragmentContainer, new Supplierdetails()).addToBackStack(null).commit();
 
             }
 

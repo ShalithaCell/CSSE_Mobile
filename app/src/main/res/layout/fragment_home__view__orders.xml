@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
 
     android:layout_height="match_parent"
-    android:backgroundTint="@color/CadetBlue"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent"
@@ -23,7 +22,7 @@
 
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="150dp"
+            android:layout_height="182dp"
             android:layout_marginTop="20dp"
             android:contentDescription="@string/surveyman"
             android:src="@drawable/task_survey" />
@@ -32,8 +31,8 @@
 
     <LinearLayout
         android:id="@+id/linearLayout1"
-        android:layout_width="408dp"
-        android:layout_height="361dp"
+        android:layout_width="411dp"
+        android:layout_height="338dp"
         android:layout_marginTop="80dp"
         android:layout_marginEnd="3dp"
         android:layout_marginBottom="121dp"
@@ -50,7 +49,7 @@
             android:id="@+id/acceptordersbtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="50dp"
             android:width="300dp"
             android:background="@drawable/button7"
             android:text="Accepted Orders"
@@ -62,7 +61,7 @@
             android:id="@+id/pendingordersbtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="70dp"
+            android:layout_marginTop="60dp"
             android:width="300dp"
             android:background="@drawable/button7"
             android:text="Pending Orders"
@@ -74,7 +73,7 @@
             android:id="@+id/rejectordersbtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="70dp"
+            android:layout_marginTop="60dp"
             android:width="300dp"
             android:background="@drawable/button7"
             android:text="Rejected Orders"

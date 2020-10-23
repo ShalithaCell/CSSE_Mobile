@@ -58,7 +58,7 @@ public class Main__Bord extends Fragment {
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                getFragmentManager().beginTransaction().replace(R.id.fragmentContainer, new Supplierdetails()).addToBackStack(null).commit();
+                getFragmentManager().beginTransaction().replace(R.id.fragmentContainer, new Home_Delivery()).addToBackStack(null).commit();
 
             }
 
@@ -69,7 +69,7 @@ public class Main__Bord extends Fragment {
             @Override
             public void onClick(View view) {
 
-                getFragmentManager().beginTransaction().replace(R.id.fragmentContainer, new Supplierdetails()).addToBackStack(null).commit();
+                getFragmentManager().beginTransaction().replace(R.id.fragmentContainer, new Home_Delivery()).addToBackStack(null).commit();
             }
 
         });

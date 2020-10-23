@@ -13,8 +13,8 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="418dp"
-        android:layout_height="355dp"
+        android:layout_width="422dp"
+        android:layout_height="324dp"
         android:layout_centerInParent="true"
         android:layout_marginEnd="9dp"
         android:background="@drawable/half_top_circle"
@@ -46,8 +46,8 @@
 
     <LinearLayout
         android:id="@+id/linearLayout1"
-        android:layout_width="410dp"
-        android:layout_height="113dp"
+        android:layout_width="396dp"
+        android:layout_height="130dp"
         android:layout_marginEnd="3dp"
         android:layout_marginBottom="136dp"
         android:gravity="center_horizontal"
@@ -61,14 +61,12 @@
             android:id="@+id/goherebtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
             android:width="300dp"
             android:background="@drawable/button7"
             android:text="View Details"
             android:textColor="@color/WhiteSmoke"
             android:textSize="15sp"
             android:textStyle="bold" />
-
     </LinearLayout>
 
 

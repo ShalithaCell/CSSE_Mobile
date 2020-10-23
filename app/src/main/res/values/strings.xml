@@ -5,14 +5,7 @@
     <string name="signup">Sign Up</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="surveylist1">Popular Templates</string>
-    <string name="surveylist2">Research/Academic</string>
-    <string name="surveylist3">Customer Feedback</string>
-    <string name="surveylist4">Delivery Feedback</string>
-    <string name="surveylist5">Retails</string>
-    <string name="surveylist6">Health Care</string>
-    <string name="surveylist7">Events</string>
-    <string name="surveylist8">General Businesses</string>
+
     <string name="submitbtn">Save</string>
     <string name="saveandsharebtn">Save and Share</string>
     <string name="sharebtn">Share</string>
@@ -36,44 +29,18 @@
     <string name="surveyname">Enter Survey Name   :</string>
     <string name="surveyhint">Survey Name</string>
     <string name="okbtn">OK</string>
-    <string name="sharewith">Share With.....</string>
-    <string name="facebook">Facebook</string>
-    <string name="gmaill">Gmail</string>
-    <string name="whatsapp">Whatsapp</string>
-    <string name="moreoption">More</string>
-    <string name="surveylink">https://Suuvey.crest.app</string>
-    <string name="sendvivatext">Send Via Text</string>
-    <string name="sendvivatelegram">Send Via Telegram</string>
-    <string name="sendviatwitter">Send Viva Twitter</string>
-    <string name="sendvialinkin">Send Via LinkdIn</string>
-    <string name="sendviaotherplatform">Send Via Other Platforms</string>
-    <string name="shareqrcode">Share QR Code</string>
+
     <string name="savebtnt">Save</string>
-    <string name="whatsapp2">WhatsApp</string>
-    <string name="chatlb">CHATS</string>
-    <string name="whatsplb">WhatsApp</string>
-    <string name="wtsplb3">WhatsApp</string>
-    <string name="whtsappls7">WhatsApp</string>
+
     <string name="sendmdgsuusfully">Send Successfully</string>
     <string name="sucmsg">Successfully Send !</string>
     <string name="backbtn">Back</string>
     <string name="exitbtn">Exit</string>
     <string name="cutermerfeedback">Customer Feedback</string>
-    <string name="cusq1">1.How often do you use our product?</string>
-    <string name="q1an1">Regularly</string>
-    <string name="q2a2">Once in while</string>
-    <string name="q1a3">Never</string>
-    <string name="cusq2">Which feature you like the most in our product?</string>
-    <string name="custerq2">2.Which feature you like the most in our product?</string>
-    <string name="cusq2a">Various types of surveys</string>
-    <string name="qq2a2">Multilingual</string>
-    <string name="qq2a3">Design</string>
+
     <string name="babtn"><![CDATA[<]]></string>
     <string name="bacbtn"><![CDATA[>]]></string>
-    <string name="cusq3">3.How would you rate the value for money of the product?</string>
-    <string name="q3aa1">Bad</string>
-    <string name="q3aa2">Regular</string>
-    <string name="q3a3">Good</string>
+
 
     <string name="save4">Save</string>
     <string name="share4">Share</string>
@@ -89,9 +56,7 @@
     <string name="exiy">Exit</string>
     <string name="writeyouanswe">    Write Your answere here</string>
     <string name="savemsg">Successfuly Saved !</string>
-    <string name="newq1">4.How would you rate value for money of the      product?</string>
-    <string name="newqq3">3.How would you rate the value for money of the      product?</string>
-    <string name="new3q3">"   3.How would you rate the value for money of the      product?"</string>
+
     <string name="recent_activities">Recent activities</string>
     <string name="app_popup_close_icon">X</string>
     <string name="enter_survey_name">Enter survey name</string>
@@ -101,17 +66,7 @@
     <string name="Reportbtn" />
     <string name="repotbtnmain">Get Report</string>
     <string name="analysis">Analysis</string>
-    <string name="selecttemplate">"-------------------- Select Survey -------------------- "</string>
-    <string name="repotd">Reports</string>
-    <string name="response">Responses</string>
-    <string name="reptanalz">Report Analysis</string>
-    <string name="topicrept">Customer Feedback</string>
-    <string name="barchat">Bar Chart</string>
-    <string name="piechart">Pie Chart</string>
-    <string name="linechart">Line Chart</string>
-    <string name="columncht">Column Chart</string>
-    <string name="otherreqst">Request New</string>
-    <string name="Responsecollected">Response Collected</string>
+
     <string name="surveystatus">Survey Status</string>
     <string name="createdon">Created On</string>
     <string name="updaeon">Updated On</string>
@@ -125,19 +80,6 @@
     <string name="responall">"Customer Feedback  - Responses  for All Questions "</string>
     <string name="points">.</string>
 
-    <string name="qqq1">Question 1</string>
-    <string name="qqq2">Question 2</string>
-    <string name="qqq3">Question 3</string>
-    <string name="qqq4">Question 4</string>
-    <string name="qqq5">Question 5</string>
-    <string name="qqq6">Question 6</string>
-    <string name="qqq7">Question 7</string>
-    <string name="qqq8">Question 8</string>
-    <string name="qqq9">Question 9</string>
-    <string name="qqq10">Question 10</string>
-    <string name="Cloumchatr">Column Chart</string>
-    <string name="topiclinechart">Line Chart</string>
-    <string name="barcht">Bar Chart</string>
     <string name="requestner">Request New</string>
     <string name="Suggestnewchart">Suggest new chart you want?</string>
     <string name="saven">Save</string>
